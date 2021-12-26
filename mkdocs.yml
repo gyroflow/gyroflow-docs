@@ -2,6 +2,7 @@ site_name: Gyroflow
 
 repo_url: https://github.com/gyroflow/gyroflow-docs
 copyright: © Gyroflow dev team  
+edit_uri: ./edit/main/docs
 
 theme:
   name: material
@@ -19,6 +20,34 @@ theme:
         icon: material/eye
         name: Switch to light mode
 
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 nav:
-    - Welcome: 'index.md'
+    - Home: 'index.md'
+    - 'Getting Started':
+        - 'Installation': 'guide/installation.md'
+        - 'Camera Calibration': 'guide/calibration.md'
+
+    - 'Gyro Logging':
+        - 'Betaflight/INav/Cleanflight/etc.': 'logging/betaflight.md'
+        - 'Ardupilot': "logging/ardupilot.md"
+        - 'Arduino/custom hardware': 'logging/customlogger.md'
+        - 'Flowbox': 'logging/flowbox.md'
+
+    - 'Camera setup guides':
+        - 'General': 'cams/general.md'
+        - 'GoPro': 'cams/gopro.md'
+        - 'Runcam': 'cams/runcam.md'
+        - 'Sony': 'cams/sony.md'
+        - 'Insta360': 'cams/insta360.md'
+
+    - 'Technical info':
+        - 'Filtering and noise': 'tech/noise.md'
+        - 'Orientations and smoothing': 'tech/smoothing.md'
