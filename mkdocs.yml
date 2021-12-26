@@ -1,5 +1,7 @@
 site_name: Gyroflow
 
+repo_url: https://github.com/gyroflow/gyroflow-docs
+copyright: © Gyroflow dev team  
 
 theme:
   name: material
@@ -16,3 +18,7 @@ theme:
       toggle:
         icon: material/eye
         name: Switch to light mode
+
+
+nav:
+    - Welcome: 'index.md'
