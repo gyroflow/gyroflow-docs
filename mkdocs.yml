@@ -5,7 +5,10 @@ copyright: © Gyroflow dev team
 edit_uri: ./edit/main/docs
 
 theme:
+  custom_dir: 'theme'
   name: material
+  favicon: assets/images/favicon.png
+  logo: assets/images/logo_small_white.svg
   palette:
     - media: "(prefers-color-scheme: light)" 
 
@@ -23,11 +26,24 @@ theme:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - attr_list
+  - md_in_html
+  - lightgallery:
+      show_description_in_lightgallery: true
+      show_description_as_inline_caption: true
+      custom_inline_caption_css_class: 'lightbox-caption-class'
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
+  - tables
 
 extra_javascript:
-  - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - assets/css/extra.css
 
 nav:
     - Home: 'index.md'
@@ -49,5 +65,7 @@ nav:
         - 'Insta360': 'cams/insta360.md'
 
     - 'Technical info':
-        - 'Filtering and noise': 'tech/noise.md'
+        - 'Filtering and noise': 'tech/filtering.md'
         - 'Orientations and smoothing': 'tech/smoothing.md'
+    - 'Contribution guide':
+        - 'Documentation': 'contrib/documentation.md'
