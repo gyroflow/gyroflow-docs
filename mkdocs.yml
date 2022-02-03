@@ -47,7 +47,7 @@ extra_css:
 
 nav:
     - Home: 'index.md'
-    - 'Getting Started':
+    - 'User guide':
         - 'Quick start guide': 'guide/quickstart.md'
         - 'Installation': 'guide/installation.md'
         - 'Camera Calibration': 'guide/calibration.md'
@@ -70,5 +70,8 @@ nav:
     - 'Technical info':
         - 'Filtering and noise': 'tech/filtering.md'
         - 'Orientations and smoothing': 'tech/smoothing.md'
-    - 'Contribution guide':
+    - 'Contribute to the project':
+        - 'Gyroflow': 'contrib/gyroflow.md'
         - 'Documentation': 'contrib/documentation.md'
+        - 'Support Gyroflow / Contributors list': 'contrib/support.md'
+

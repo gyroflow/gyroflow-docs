@@ -1,6 +1,6 @@
 # Quick start guide for Gyroflow 1.0.0
 
-1. Download the executable corresponding to your system: https://github.com/adrianeddy/gyroflow/releases
+1. Download the executable corresponding to your system: [https://github.com/gyroflow/gyroflow/releases](https://github.com/gyroflow/gyroflow/releases)
 2. Run the executable.
 3. Either open or drag your video file to Gyroflow.
 4. Lens profile and motion data files are automatically detected for some cameras (GoPros). Otherwise search for the correct lens profile and open the motion data file.

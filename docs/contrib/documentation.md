@@ -11,8 +11,7 @@ Alternatively each page has an edit button which directly opens the GitHub onlin
 In general, create GitHub pull request to merge the edits.
 
 
-## MkDocs/Markdown snippets
-
+## MkDocs/Markdown examples
 
 !!! note
 

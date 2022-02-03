@@ -19,7 +19,7 @@ The minimum logging rate sufficient for stabilization is approximately 100 Hz, b
 
 ## `.gcsv` gyro log format
 
-!!! warning "This is a warning"
+!!! warning
 
     At the time of writing, this format has been designed but not yet fully implemented. This will be done very soon.
 
@@ -34,6 +34,7 @@ GYROFLOW IMU LOG
 version,1
 id,custom_logger_name
 orientation,XYZ
+note,FIRMWARE_0.1.0
 tscale,0.001
 gscale,0.0002663161
 ascale,0.00059875488
@@ -60,13 +61,14 @@ Breaking this down:
 
 1. The first line identifies the file as a IMU log. This line should either be `GYROFLOW IMU LOG` or the more neutral `CAMERA IMU LOG`.
 2. The second line `version,1` describes the "version" of the .gcsv file. This is equal to `1` for now.
-3. The second line contains a unique ID associated with the logger/camera. For instance a high-end camera with internal logging may use `id,potatocam_deluxe_4k_grey_edition`.
-4. The third line contains the orientation string. This corresponds to the `IMU Orientation` field in Gyroflow.
-5. The subsequent lines with `tscale`, `ascale` and `gscale` describe constants used to scale the raw sensor values.
+3. The third line contains a unique ID associated with the logger/camera. For instance a high-end camera with internal logging may use `id,potatocam_deluxe_4k_grey_edition`.
+4. The forth line contains the orientation string. This corresponds to the `IMU Orientation` field in Gyroflow.
+5. The next line is an optional note, and can contain other relevant information, such as the camera/logger firmware version etc.
+6. The subsequent lines with `tscale`, `ascale` and `gscale` describe constants used to scale the raw sensor values.
 	- Multiplying `tscale` by the raw `t` values should give the time in **seconds**. It can thus be deduced that the file above is logging at 1000 Hz.
 	- Multiplying `ascale` by the raw `ax/ay/az` values should give the acceleration in **g**
 	- Multiplying `gscale` by the raw `gx/gy/gz` values should give the angular rate in **rad/s**
-6. The rest of the file simply consists of a standard CSV header and the raw values. Note that fixed-point integers are used with a scalar in order to avoid excessively large text files.
+7. The rest of the file simply consists of a standard CSV header and the raw values. Note that fixed-point integers are used with a scalar in order to avoid excessively large text files. Using floating points here is still valid though.
 
 The header of the `.gcsv` file (for the most part) remains static for a given camera/setup, and can thus be written as a constant string to the file.
 
@@ -86,4 +88,10 @@ t,gx,gy,gz,ax,ay,az,mx,my,mz
 0,39,86,183,-1137,-15689,-2986,123,345,546
 1,56,100,202,-1179,-15694,-2887,124,344,560
 ```
-with `mscale` leading to values in **gauss** (Note that `1 tesla = 10000 gauss`)
+with `mscale` leading to values in **gauss** (Note that `1 tesla = 10000 gauss`). Similarly, if only gyroscope data is used, the `ax,ay,az` columns can be left out.
+
+For a logger/camera implementation, some other things to think about:
+
+* For a camera, the timestamps should be based on the same time source as the video capture. This prevents drift between the two.
+* Consider using microseconds for the timestamp if a faster sampling rate if the time source allows. This may improve the timing during the sync process.
+* Consider using the data ready interrupts of IMU's instead of polling for more consistent timings.

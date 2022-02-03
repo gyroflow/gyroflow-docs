@@ -4,6 +4,7 @@ Gyroflow has a large number of settings for customizing everything. This page co
 ![!Figure: Full screenshot](img/screenshot_full.jpg){ width="100%" }
 ## Input/video information
 ![!](img/screenshot_videoinfo.jpg){ width="100%" }
+
 After opening a video file, video information and metadata are displayed here.
 
 ### Frame rate
