@@ -1,8 +1,12 @@
 site_name: Gyroflow
 
-repo_url: https://github.com/gyroflow/gyroflow-docs
+
+repo_url: https://github.com/gyroflow/gyroflow
 copyright: © Gyroflow dev team  
-edit_uri: ./edit/main/docs
+edit_uri: ../gyroflow-docs/edit/main/docs
+
+extra:
+  homepage: https://gyroflow.xyz
 
 theme:
   custom_dir: 'theme'
