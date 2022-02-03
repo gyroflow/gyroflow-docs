@@ -48,13 +48,16 @@ extra_css:
 nav:
     - Home: 'index.md'
     - 'Getting Started':
+        - 'Quick start guide': 'guide/quickstart.md'
         - 'Installation': 'guide/installation.md'
         - 'Camera Calibration': 'guide/calibration.md'
+        - 'Settings': 'guide/settings.md'
 
     - 'Gyro Logging':
+        - 'General': 'logging/general.md'
         - 'Betaflight/INav/Cleanflight/etc.': 'logging/betaflight.md'
-        - 'Ardupilot': "logging/ardupilot.md"
-        - 'Arduino/custom hardware': 'logging/customlogger.md'
+        - 'Action cam as logger': "logging/actioncamlogger.md"
+        - 'Custom hardware/logger': 'logging/customlogger.md'
         - 'Flowbox': 'logging/flowbox.md'
 
     - 'Camera setup guides':
