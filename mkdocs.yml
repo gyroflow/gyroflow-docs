@@ -56,7 +56,6 @@ nav:
         - 'Installation': 'guide/installation.md'
         - 'Camera Calibration': 'guide/calibration.md'
         - 'Settings': 'guide/settings.md'
-        - 'Synchronization': 'guide/synchronization.md'
 
     - 'Gyro Logging':
         - 'General': 'logging/general.md'

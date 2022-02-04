@@ -3,7 +3,7 @@ This page contains projects and technical literature which may be of interest to
 ## Gyro-assisted video stabilization projects
 * [Legacy Python-version of Gyroflow](https://github.com/ElvinC/gyroflow/)
 * [Virtual Gimbal](https://github.com/yossato/virtualGimbal) by Yoshiaki Sato. Another gyro-assisted stabilization tool
-* [Video-Stabilization](https://github.com/alex-golts/Video-Stabilization) by Alex Karpenko. One of the first implementations of the method.
+* [Video-Stabilization](https://github.com/alex-golts/Video-Stabilization) by Alex Karpenko. One of the first implementations of the method
 
 
 ## Papers
