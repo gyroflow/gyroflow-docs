@@ -127,3 +127,5 @@ The readout time can also be estimated with the "Estimate rolling shutter here" 
 ## Export
 The options here are fairly self-explanatory. For any doubts, see the tooltips. By default, the resolution and bitrate are selected to correspond closely to the input file
 ![!](img/screenshot_export.jpg){ width="40%" }
+
+From the dropdown of the export button, it is possible to export a `.gyroflow`. This file contains all the required data and sync information for a video file, and is automatically detected the next time you want to process the same file.
