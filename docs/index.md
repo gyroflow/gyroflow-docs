@@ -1,5 +1,10 @@
 # Welcome to the Gyroflow Docs!
 
+! warning
+
+	this site is under construction. Please go to [gyroflow.xyz](gyroflow.xyz) for now
+
+
 Here you can find information about setup and configuration of the Gyroflow stabilization software.
 
 ![!](assets/images/gyroflow_screenshot.jpg){ width="100%" }

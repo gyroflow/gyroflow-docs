@@ -5,9 +5,10 @@ Surprise! All along the Runcam 5 Orange had an IMU hidden inside. This was of co
 
 The following have been found to be decent settings for the Runcam 5 Orange, with \* indicating it's important for Gyroflow stabilization.
 
+
 * Video quality: High
 * Resolution\*: Either 4K@30FPS(XV) or 1440p@60fps.
-	- The XV resolution is actually the full 4:3 sensor stretched to a 16:9 image (supported by Gyroflow). So this gives the highest resolution and FOV.
+	- The XV resolution is actually the full 4:3 sensor stretched to a 16:9 image. So this gives the highest resolution and FOV.
 	-  Note that the stretching looks bad, so if used without additional processing, linearly squeeze the width to 75% in the video editor to get a 4:3 image.
 	- The 1440p option is natively 4:3, so if you want 60fps use this one.
 	- You can also use one of the 16:9 resolutions, but this significantly reduces the available FOV for stabilization.
@@ -61,6 +62,10 @@ In Gyroflow
 * If using 4K XV, use the preset: `RunCam/Runcam_5_Orange_4K_30FPS_XV_16by9_stretched.json`
 * If using 1440p 60fps use: `RunCam/Runcam_5_Orange_1440p_4by3.json`
 * Low pass filter at about `60 Hz` should be fine
+
+
+**Note**: Gyroflow v1.0.0-rc1 does not yet support the 4K XV option right away (will be added shortly). Use `adjust parameters` and change the first `Pixel focal length` value from `1503.650975788249` to `2004.868`: 
+
 
 ## GOCam PM GR
 Depending on your setup, you might need to softmount this cam, since the the gyro can be sensitive to motor noise vibrations.

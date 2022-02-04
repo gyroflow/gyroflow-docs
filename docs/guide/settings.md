@@ -56,7 +56,7 @@ For translating the raw gyroscope and accelerometer sensor readings to actual or
 Madgwick, Complementary, and Mahony all use a combination of gyroscope and accelerometer for estimating the orientation. The accelerometer allows for determining the downwards direction, meaning these integrators can be used with **Lock horizon**. With horizon lock, the Complementary filter usually gives decent results with the least horizon drift, but you can compare yourself.
 By comparison, the Gyroflow option only uses the gyroscope and doesn't work with horizon leveling.
 
-For hero 8 and newer, selecting **None** means no synchronisation is required at all.
+For hero 8 and newer, selecting **None** means no synchronization is required at all.
 
 ## Synchronization
 Synchronization is typically required between the video and and gyro data. This can either be auto-sync, or by manually syncing at specified times by right-clicking the timeline.
@@ -104,7 +104,7 @@ Apply a scale to the field of view of the output video.
 The currently available stabilization algorithms are:
 
 * No smoothing - Useful if only lens undistortion is desired
-* Plain 3D - Simple general purpose smoothing algorithm described [here](../../tech/smoothing). Smoothing applied symetrically in 3D with no rotation limit (doesn't work for rapid camera motion).
+* Plain 3D - Simple general purpose smoothing algorithm described [here](../../tech/smoothing). Smoothing applied symmetrically in 3D with no rotation limit (doesn't work for rapid camera motion).
 * Velocity dampened - Decreases the smoothing during significant camera motion in order to avoid the image moving out of frame.
 * Velocity dampened per axis - Similar to Velocity dampened with individual roll/pitch/yaw smoothness control. Typically the roll axis can be smoothed out more.
 * Lock horizon - Attempts to keep the horizon level. Works best for flight without fast rotational moves since some gyros can be maxed out. Try with the complementary filter.
@@ -112,15 +112,15 @@ The currently available stabilization algorithms are:
 
 ### Crop
 
-Select the behavoir of the cropping.
+Select the behavior of the cropping.
 
 * No cropping - Remain at the user-defined FOV throughout the video
 * Dynamic cropping - Dynamically adjust the field of view in order to hide any borders throughout the video. The `Smoothing window` influences how quickly the FOV changes in response to different stabilized frame orientations.
 * Static crop - Static crop with FOV=1 being the FOV at which no edges are visible throughout the video.
 
 ### Rolling shutter correction
-Rolling shutter artefacts are visible during fast camera motion, and appears as "wobbling" or skewed lines. This option requires precise gyro-video sync.
-Find a spot in the video with clear rolling shutter artefacts, and adjust the frame readout time until these artefacts are minimised. By default, the frame readout is assumed to be from top to bottom. This is changed with the checkbox.
+Rolling shutter artifacts are visible during fast camera motion, and appears as "wobbling" or skewed lines. This option requires precise gyro-video sync.
+Find a spot in the video with clear rolling shutter artifacts, and adjust the frame readout time until these artifacts are minimized. By default, the frame readout is assumed to be from top to bottom. This is changed with the checkbox.
 
 The readout time can also be estimated with the "Estimate rolling shutter here" option in the context menu of the timeline, although this is experimental.
 

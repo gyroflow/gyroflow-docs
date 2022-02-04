@@ -1,7 +1,7 @@
 Due to the flexibility of Gyroflow, the gyro source and the video source can be "mismatched". This means that an action camera with internal gyro logging (e.g. GoPro) can be mounted to a high-end cinema camera acting as a gyro logger. This setup is illustrated below.
 
 
-![!](img/gopro_logger.jpg){ width="100%" }
+![!](img/gopro_logger.jpg){ width="70%" }
 
 
 The advantages of this setup is the availability of GoPros/Insta360 cameras among filmmakers, meaning no additional hardware other than some fasteners.

@@ -56,6 +56,7 @@ nav:
         - 'Installation': 'guide/installation.md'
         - 'Camera Calibration': 'guide/calibration.md'
         - 'Settings': 'guide/settings.md'
+        - 'Synchronization': 'guide/synchronization.md'
 
     - 'Gyro Logging':
         - 'General': 'logging/general.md'
@@ -74,6 +75,8 @@ nav:
     - 'Technical info':
         - 'Filtering and noise': 'tech/filtering.md'
         - 'Orientations and smoothing': 'tech/smoothing.md'
+        - 'Rolling Shutter': 'tech/rollingshutter.md'
+        - 'Related Projects/Literature': 'tech/relatedprojects.md'
     - 'Contribute to the project':
         - 'Gyroflow': 'contrib/gyroflow.md'
         - 'Documentation': 'contrib/documentation.md'

@@ -1,1 +1,3 @@
-Some sony cameras are capable of logging motion metadata...
+The following cameras are capable of native gyro data logging: a1, a6600, a7c, a7r IV, a7 IV, a7s III, a9 II, FX3, FX6, RX0 II, RX100 VII, ZV1, ZV-E10
+
+This data is designed for use with Sony's [Catalyst Browse](https://www.sonycreativesoftware.com/catalystbrowse) stabilization which cannot stabilize footage shot with third-party lenses. Gyroflow supports reading this metadata natively, thus giving access to more smoothing algorithms and support for third-party lenses.

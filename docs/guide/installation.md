@@ -13,9 +13,9 @@
 - Android 6+
 
 ## Releases
-Prebuilt executables are available for Windows, Mac, and Linux. These can be found on the [releases page](https://github.com/adrianeddy/gyroflow/releases)
+Prebuilt executables are available for Windows, Mac, and Linux. These can be found on the [releases page](https://github.com/gyroflow/gyroflow/releases)
 
 
 ## Build local version
 
-For development purposes, a local version can be built. For instructions, see the [README on GitHub](https://github.com/adrianeddy/gyroflow#development):
+For development purposes, a local version can be built. For instructions, see the [README on GitHub](https://github.com/gyroflow/gyroflow#development):
