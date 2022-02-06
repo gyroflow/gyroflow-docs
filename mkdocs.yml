@@ -71,6 +71,9 @@ nav:
         - 'Sony': 'cams/sony.md'
         - 'Insta360': 'cams/insta360.md'
 
+    - 'Plugins and integrations':
+        - 'OpenFX Plugin': 'integrations/OpenFX.md'
+
     - 'Technical info':
         - 'Filtering and noise': 'tech/filtering.md'
         - 'Orientations and smoothing': 'tech/smoothing.md'
