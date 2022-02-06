@@ -1,0 +1,1 @@
+Action cameras from Insta360 (OneR, SMO 4k, Go, GO2) support gyro logging for use with the Flowstate stabilization option. This metadata also works with Gyroflow. Once again, try recording at the widest possible field of view. e.g. the _Pro Video_ on the Go 2 saves the full sensor frame.
