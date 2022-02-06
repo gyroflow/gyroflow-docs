@@ -13,10 +13,12 @@ GYROFLOW IMU LOG
 version,1.1
 id,custom_logger_name
 orientation,XYZ
-note,FIRMWARE_0.1.0
+note,development_test
+fwversion,FIRMWARE_0.1.0
 timestamp,1644159993
 vendor,potatocam
 videofilename,videofilename.mp4
+lensprofile,potatocam_mark1_prime_7_5mm_4k
 tscale,0.001
 gscale,0.00122173047
 ascale,0.00048828125
@@ -42,10 +44,10 @@ t,gx,gy,gz,ax,ay,az
 Breaking this down:
 
 1. The first line identifies the file as a IMU log. This line should either be `GYROFLOW IMU LOG` or the more neutral `CAMERA IMU LOG`.
-2. The second line `version,1` describes the "version" of the .gcsv file. This is equal to `1` for now.
+2. The second line `version,1.1` describes the "version" of the .gcsv file format. This is equal to `1.1` for now.
 3. The third line contains a unique ID associated with the logger/camera. For instance a high-end camera with internal logging may use `id,potatocam_deluxe_4k_grey_edition`.
 4. The forth line contains the orientation string. This corresponds to the `IMU Orientation` field in Gyroflow.
-5. The next few lines with `note`, `timestamp`, `vendor`, `videofilename` are all optional. `Note` is for other misc. information, such as logger firmware version, `timestamp` is the unix timestamp at the unix timestamp when logging began, `vendor` can contain the vendor or developer, `videofilename` is the name of the corresponding video file.
+5. The next few lines with `note`, `fwversion`, `timestamp`, `vendor`, `videofilename`, `lenspreset` are all optional. `Note` is for other misc. information, `fwversion` is the firmware of the logger/camera, `timestamp` is the unix timestamp when logging began, `vendor` can contain the vendor or developer, `videofilename` is the name of the corresponding video file, `lensprofile` is the unique name of the lens preset.
 6. The subsequent lines with `tscale`, `ascale` and `gscale` describe constants used to scale the raw sensor values.
 	- Multiplying `tscale` by the raw `t` values should give the time in **seconds**. It can thus be deduced that the file above is logging at 1000 Hz.
 	- Multiplying `ascale` by the raw `ax/ay/az` values should give the acceleration in **g**
