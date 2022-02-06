@@ -62,6 +62,7 @@ nav:
         - 'Betaflight/INav/Cleanflight/etc.': 'logging/betaflight.md'
         - 'Action cam as logger': "logging/actioncamlogger.md"
         - 'Custom hardware/logger': 'logging/customlogger.md'
+        - 'Gyroflow .gcsv reference': 'logging/gcsv.md'
         - 'Flowbox': 'logging/flowbox.md'
 
     - 'Camera setup guides':
