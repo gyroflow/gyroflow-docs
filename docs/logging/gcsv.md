@@ -1,8 +1,6 @@
 ## `.gcsv` gyro log format
 
-!!! warning
-
-What follows is a text-based gyro log format that can easily be implemented in custom hardware/firmware called `.gcsv` (short for gyro csv or gyroflow csv).
+What follows is a text-based gyro log format that can easily be implemented in custom hardware/firmware called `.gcsv` (short for gyro csv or Gyroflow csv).
 
 Firstly, for a video file called `videofilename.mp4`, the corresponding gyro log file is `videofilename.gcsv`. This allows for automatic log detection.
 
@@ -12,7 +10,7 @@ The `.gcsv` file contains information about the gyro orientation, scaling, and a
 GYROFLOW IMU LOG
 version,1.1
 id,custom_logger_name
-orientation,XYZ
+orientation,YxZ
 note,development_test
 fwversion,FIRMWARE_0.1.0
 timestamp,1644159993
@@ -43,7 +41,7 @@ t,gx,gy,gz,ax,ay,az
 
 Breaking this down:
 
-1. The first line identifies the file as a IMU log. This line should either be `GYROFLOW IMU LOG` or the more neutral `CAMERA IMU LOG`.
+1. The first line identifies the file as an IMU log. This line should either be `GYROFLOW IMU LOG` or the more neutral `CAMERA IMU LOG`.
 2. The second line `version,1.1` describes the "version" of the .gcsv file format. This is equal to `1.1` for now.
 3. The third line contains a unique ID associated with the logger/camera. For instance a high-end camera with internal logging may use `id,potatocam_deluxe_4k_grey_edition`.
 4. The forth line contains the orientation string. This corresponds to the `IMU Orientation` field in Gyroflow.
@@ -61,12 +59,18 @@ Raw sensor values are often represented as 16-bit signed integers, meaning a ran
 If a magnetometer is present, it's simply:
 ```
 GYROFLOW IMU LOG
-version,1
+version,1.1
 id,custom_logger_name
 orientation,YxZ
+note,development_test
+fwversion,FIRMWARE_0.1.0
+timestamp,1644159993
+vendor,potatocam
+videofilename,videofilename.mp4
+lensprofile,potatocam_mark1_prime_7_5mm_4k
 tscale,0.001
-gscale,0.0002663161
-ascale,0.00059875488
+gscale,0.00122173047
+ascale,0.00048828125
 mscale,0.00059875488
 t,gx,gy,gz,ax,ay,az,mx,my,mz
 0,39,86,183,-1137,-15689,-2986,123,345,546
@@ -80,6 +84,6 @@ For a logger/camera implementation, some other things to think about:
 * Consider using microseconds for the timestamp if a faster sampling rate if the time source allows. This may improve the timing during the sync process.
 * Consider using the data ready interrupts of IMU's instead of polling for more consistent timings.
 
-For the IMU Orientation string, the following figure corresponds to `YxZ`:
+For the IMU Orientation string, the following figure corresponds to `YxZ`.
 
 ![!](img/example_axes.png){ width="100%" }
