@@ -44,7 +44,7 @@ Breaking this down:
 1. The first line identifies the file as an IMU log. This line should either be `GYROFLOW IMU LOG` or the more neutral `CAMERA IMU LOG`.
 2. The second line `version,1.1` describes the "version" of the .gcsv file format. This is equal to `1.1` for now.
 3. The third line contains a unique ID associated with the logger/camera. For instance a high-end camera with internal logging may use `id,potatocam_deluxe_4k_grey_edition`.
-4. The forth line contains the orientation string. This corresponds to the `IMU Orientation` field in Gyroflow.
+4. The fourth line contains the orientation string. This corresponds to the `IMU Orientation` field in Gyroflow.
 5. The next few lines with `note`, `fwversion`, `timestamp`, `vendor`, `videofilename`, `lenspreset` are all optional. `Note` is for other misc. information, `fwversion` is the firmware of the logger/camera, `timestamp` is the unix timestamp when logging began, `vendor` can contain the vendor or developer, `videofilename` is the name of the corresponding video file, `lensprofile` is the unique name of the lens preset.
 6. The subsequent lines with `tscale`, `ascale` and `gscale` describe constants used to scale the raw sensor values.
 	- Multiplying `tscale` by the raw `t` values should give the time in **seconds**. It can thus be deduced that the file above is logging at 1000 Hz.

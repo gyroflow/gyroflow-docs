@@ -44,6 +44,12 @@ If the gyroscope sensor isn't aligned at right angles with the camera, an additi
 ### IMU Orientation
 The compact `xyz` notation is used to describe the right-angle orientation between the camera and the gyro, with uppercase letters being positive and lowercase being negative. In most cases, this is automatically detected, but if stabilization appears to be applied in the wrong direction/axis, changing the IMU orientation may be required.
 
+If you have some `input` motion data, then `Yxz` means `output` (displayed in the graph) is computed as follows:
+
+* Take `y` from `input` and put in `x` of `output`
+* Take `-x` from `input` and put in `y` of `output`
+* Take `-z` from `input` and put in `z` of `output`
+
 ### Integration method
 For translating the raw gyroscope and accelerometer sensor readings to actual orientations usable for video stabilization, an integration method is used. Currently available are:
 
