@@ -1,5 +1,6 @@
 ## Minimum system requirements:
 - Windows 10 64-bit (1809 or later)
+    - Windows "N" versions: Install the "Media Feature Pack", go to Settings -> Apps -> Optional features -> Add a feature -> Select "Media Feature Pack" -> Click Install
 - macOS 10.14 or later (both Intel and Apple Silicon are supported natively)
 - Linux: 
     - `.tar.gz` package (recommended): Debian 10+, Ubuntu 18.10+, CentOS 8.2+, openSUSE 15.3+. Other distros require glibc 2.28+ (`ldd --version` to check)
