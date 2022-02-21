@@ -1,5 +1,10 @@
 # Quick start guide for Gyroflow 1.0.0
 
+Nurk FPV has a nice tutorial for getting started with the software:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QAds3x8UU1w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br>
+
 1. Download the executable corresponding to your system: [https://github.com/gyroflow/gyroflow/releases](https://github.com/gyroflow/gyroflow/releases)
 2. Run the executable.
 3. Either open or drag your video file to Gyroflow.
