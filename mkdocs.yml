@@ -60,10 +60,11 @@ nav:
     - 'Gyro Logging':
         - 'General': 'logging/general.md'
         - 'Betaflight/INav/Cleanflight/etc.': 'logging/betaflight.md'
+        - 'Flowbox': 'logging/flowbox.md'
+        - 'Flowshutter': 'logging/flowshutter.md'
         - 'Action cam as logger': "logging/actioncamlogger.md"
         - 'Custom hardware/logger': 'logging/customlogger.md'
         - 'Gyroflow .gcsv reference': 'logging/gcsv.md'
-        - 'Flowbox': 'logging/flowbox.md'
 
     - 'Camera setup guides':
         - 'General': 'cams/general.md'

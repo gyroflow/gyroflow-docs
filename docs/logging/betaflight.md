@@ -4,8 +4,8 @@ Betaflight/Cleanflight/Inav/Emuflight/etc form a popular family of flight contro
 ## Hardware
 As you may already know, the above mentioned flight firmwares can all run on the same type of hardware. A flight controller supporting this family of flight firmwares typically contain:
 
-* STMicroelectronics 32 bit microcontroller (F4, F7, H7)
-* MEMS inertial measurement unit (MPU6000, BHI160, ICM2xxxx, ICM4xxxx etc.)
+* STMicroelectronics 32 bit microcontroller (F4, F7, G4, H7)
+* MEMS inertial measurement unit (MPU6000, BMI270, ICM2xxxx, ICM4xxxx etc.)
 
 Some flight controllers have an onboard magnetometer. In general, this is not required for video stabilization purposes unless absolute orientation is desired.
 
@@ -27,10 +27,16 @@ Required software:
 
 The following should be a decent starting point for the blackbox configuration
 
-* 500 Hz logging rate
+* 250 Hz logging rate
 * Debug mode: `None`
 
-If you're running Betaflight 4.3 or newer, it is possible to deselect specific elements of the data logging in order to save precious recording space. From the CLI:
+If you're running Betaflight 4.3 or newer, it is possible to deselect specific elements of the data logging in order to save precious recording space.
+
+We have a gyroflow-betaflight presets source for your convenience. You can easily set it up like the picture shown below:
+
+![gyroflow-logger-presets](img/logger-preset-how-to-use.png)
+
+Or you might prefer the "old fashion", from the CLI:
 ```
 set blackbox_disable_pids = ON
 set blackbox_disable_rc = ON
@@ -45,3 +51,7 @@ set blackbox_disable_gps = ON
 ```
 
 ![!Betaflight configurator blackbox tab](img/config-blackbox.jpg){ width="100%" }
+
+## Acknowledgements
+
+- [logger-presets](https://gihtub.com/gyroflow/logger-presets): Forked from betaflight/firmware-persets

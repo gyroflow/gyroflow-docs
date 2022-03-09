@@ -1,0 +1,3 @@
+Flowshutter is a custom camera remote. When used in conjunction with readily available hardware, this results in a flexible and reliable external camera motion logger for Gyroflow. It can provide precise synchronization of camera video recording and motion logger (betaflight/emuflight FC) recording.
+
+It was designed to be used with the Gyroflow software to provide you one of the best open source video stabilization experiences.
