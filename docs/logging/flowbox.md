@@ -118,4 +118,4 @@ set blackbox_mode = ALWAYS
 
 ## Use with flowshutter
 
-Check [flowshutter](flowshutter.md)
+Check [flowshutter](flowshutter/flowshutter.md)
