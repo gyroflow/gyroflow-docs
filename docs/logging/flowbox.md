@@ -103,7 +103,7 @@ Flowbox has two UARTs, which support a lot of serial receiver (not included SBUS
 
 ![flowbox-uarts](img/flowbox-uarts.png)
 
-Once the receiver is hooked up, you need to set the corespond UART and protocol.
+Once the receiver is hooked up, you need to set the correspond UART and protocol.
 
 ![select-port](img/select-port.png)
 ![select-protocol](img/select-protocol.png)
