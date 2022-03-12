@@ -16,14 +16,20 @@ Currently we are working with a manufacturer that will produce flowshutter hardw
 At the same time you can try to DIY your own flowshutter hardware. I have two open sourced designs:
 
 - [Credit card size](https://oshwhub.com/AirFleet/xiang-ji-kong-zhi-ban): build video is [here](https://www.youtube.com/watch?v=ELaQPYE9ncA)
-- [FC size](https://oshwhub.com/AirFleet/xiang-ji-kong-zhi-ban_copy_copy): build video coming soon
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ELaQPYE9ncA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- [FC size](https://oshwhub.com/AirFleet/xiang-ji-kong-zhi-ban_copy_copy): build video is [here](https://youtu.be/ry7Ey54Z7s8)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ry7Ey54Z7s8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ### Compatible camera protocol/trigger mechanisms
 
 - Sony Multi-Terminal Port USB Protocol
 - (WIP) Sony LANC protocol
 - (WIP) Canon/Nikon: trigger by short
-- (WIP) RED/Knifinity: trigger by voltage
+- (WIP) RED/Kinefinity: trigger by voltage
 
 Check out our [supported camera list](camera list.md) for more details.
 
