@@ -58,17 +58,17 @@ nav:
         - Settings: guide/settings.md
 
     - Gyro Logging:
+        - General: logging/general.md
         - Flowshutter:
             - Overview: logging/flowshutter/flowshutter.md
             - Settings: logging/flowshutter/settings.md
             - DIY camera jacks: logging/flowshutter/diy camera jacks.md
             - Supported camera list: logging/flowshutter/camera list.md
-        - General: logging/general.md
-        - Gyroflow .gcsv reference: logging/gcsv.md
         - Betaflight/INav/Cleanflight/etc.: logging/betaflight.md
         - Flowbox: logging/flowbox.md
         - Action cam as logger: logging/actioncamlogger.md
         - Custom hardware/logger: logging/customlogger.md
+        - Gyroflow .gcsv reference: logging/gcsv.md
 
     - Camera setup guides:
         - General: cams/general.md
