@@ -32,9 +32,20 @@ The following should be a decent starting point for the blackbox configuration
 
 If you're running Betaflight 4.3 or newer, it is possible to deselect specific elements of the data logging in order to save precious recording space.
 
+### Gyroflow logger preset
+
 We have a gyroflow-betaflight presets source for your convenience. You can easily set it up like the picture shown below:
 
 ![gyroflow-logger-presets](img/logger-preset-how-to-use.png)
+
+Once the gyroflow logger preset is actived, you'll see some special gyroflow presets:
+
+- **Gyroflow minimal settings**: for users who wanna use the blackbox data from main FC as motion data for video stabilization.
+- **Sencondary FC as Gyroflow motion logger**: for users who use a secondary FC as a gyroflow motion logger.
+- **Gyroflow BMI270 Filter sttings**: for users whose FC has a BMI270 sensor and want to use it as a gyroflow motion logger.
+- **Flowbox target settings**: preset for flowbox and flowbox+flowshutter
+
+### CLI commands
 
 Or you might prefer the "old fashion", from the CLI:
 ```
@@ -50,8 +61,8 @@ set blackbox_disable_motors = ON
 set blackbox_disable_gps = ON
 ```
 
-![!Betaflight configurator blackbox tab](img/config-blackbox.jpg){ width="100%" }
+![!Betaflight configurator blackbox tab](img/config-blackbox.png){ width="100%" }
 
 ## Acknowledgements
 
-- [logger-presets](https://gihtub.com/gyroflow/logger-presets): Forked from betaflight/firmware-persets
+- [logger-presets](https://github.com/gyroflow/logger-presets): Forked from betaflight/firmware-persets
