@@ -27,9 +27,10 @@ At the same time you can try to DIY your own flowshutter hardware. I have two op
 ### Compatible camera protocol/trigger mechanisms
 
 - Sony Multi-Terminal Port USB Protocol
+- Momentary Ground
+- Schmitt Trigger
 - (WIP) Sony LANC protocol
-- (WIP) Canon/Nikon: trigger by short
-- (WIP) RED/Kinefinity: trigger by voltage
+- (WIP) HDMI CEC protocol
 
 Check out our [supported camera list](camera list.md) for more details.
 
