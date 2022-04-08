@@ -19,8 +19,12 @@ Used to specify how the flowshutter interacts with the camera.
 
 - **Sony MTP**: [Sony Multi-Terminal Port USB Protocol](camera%20list.md#sony-multi-terminal-protocol) on UART2
 - **MMTRY GND**: [Momentary Ground](camera%20list.md#momentary-ground) on GPIO 25 (TX2)
-- **Schmitt Trig**: [Schmitt Trigger](camera%20list.md#schmitt-trigger) on GPIO 26 (RX2)
+- **3V3 Schmitt**: [3.3V Schmitt Trigger](camera%20list.md#33v-schmitt-trigger) on GPIO 26 (RX2)
 - **NO**: NO interact with the camera
+
+When you change the camera protocol, please restart when you receive the restart prompt on the OLED to ensure that the relevant hardware devices are properly applied / the microcontroller is properly initialized.
+
+**Do not use the wrong camera protocol on devices that do not match. Otherwise, there may be a crash/port burnout/equipment loss of warranty or even fire!**
 
 Other protocols/mechenisms are under development.
 

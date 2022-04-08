@@ -4,9 +4,9 @@ It was designed to be used with the Gyroflow software to provide you one of the 
 
 ## Features
 
-- "1-click" - start/stop (1) FC arm (2) camera recording at the same time
-- "Audio injection" - inject sync marker to the audio track for precise synchronization between video and gyro data
-- OLED display - show the device information and allow user to change settings without hacking the firmware code
+- **"1-click"** - start/stop (1) FC arm (2) camera recording at the same time
+- **"Audio injection"** - inject sync marker to the audio track for precise synchronization between video and gyro data
+- **OLED display** - show the device information and allow user to change settings without hacking the firmware code
 - OTA update - (WIP) update the firmware over the air
 
 ## Supported Hardware
@@ -28,7 +28,8 @@ At the same time you can try to DIY your own flowshutter hardware. I have two op
 
 - Sony Multi-Terminal Port USB Protocol
 - Momentary Ground
-- Schmitt Trigger
+- 3.3V Schmitt Trigger
+- (WIP) 5V/12V Schmitt Trigger
 - (WIP) Sony LANC protocol
 - (WIP) HDMI CEC protocol
 
