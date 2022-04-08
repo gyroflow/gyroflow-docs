@@ -62,8 +62,8 @@ nav:
         - Flowshutter:
             - Overview: logging/flowshutter/flowshutter.md
             - Settings: logging/flowshutter/settings.md
+            - List for Supported Camera: logging/flowshutter/camera list.md
             - DIY camera jacks: logging/flowshutter/diy camera jacks.md
-            - Supported camera list: logging/flowshutter/camera list.md
         - Betaflight/INav/Cleanflight/etc.: logging/betaflight.md
         - Flowbox: logging/flowbox.md
         - Action cam as logger: logging/actioncamlogger.md
