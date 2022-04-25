@@ -76,6 +76,7 @@ nav:
         - Runcam: cams/runcam.md
         - Sony: cams/sony.md
         - Insta360: cams/insta360.md
+        - Mobius: cams/mobius.md
 
     - Plugins and integrations:
         - OpenFX Plugin: integrations/OpenFX.md
