@@ -1,6 +1,12 @@
-# Quick start guide for Gyroflow 1.0.0
+# Getting Started with Gyroflow 1.0 +
 
-Nurk FPV has a nice tutorial for getting started with the software:
+Welcome to the Gyroflow Quick Start Guide!
+
+Please use the Navigation Bar at the bottom of each page for a more step-by-step approach, or use the Navigation Menu at the left to get to a Hardware-specific Guide. Longer pages have a Table of Contents menu found on the right hand side of the page.
+
+We hope these pages have been helpful and you enjoy using Gyroflow!
+
+Nurk FPV also made a nice tutorial for getting started with the software:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/QAds3x8UU1w" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>

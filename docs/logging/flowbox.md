@@ -1,17 +1,17 @@
 Flowbox is an extremely compact gyro logger developed for using with Gyroflow. It has:
 
 - USB-C connector
-- F411
-- BMI270
+- STM32F411 MCU
+- BMI270 IMU
 - 128MB onboard SPI flash chip
-- onboard beeper
+- Onboard beeper
 - 2 UARTs
 
 It is not yet available, but here's basic tutorial.
 
 ## Start with presets
 
-Since the flowbox is based on F411 MCU and BMI270 gyroscope, only betafligh 4.3 or newer firmware support it.
+Since the flowbox is based on F411 MCU and BMI270 gyroscope, only betaflight 4.3 or newer firmware support it.
 
 We have a gyroflow-betaflight presets source for your convenience, and you can quickly set up your flowbox with "one click".
 
@@ -27,7 +27,7 @@ https://github.com/gyroflow/logger-presets
 
 ### Flash firmware
 
-The flashing procedure is pretty same like other betaflight flight controllers. here's the step:
+The flashing procedure is pretty similar to other betaflight flight controllers. here's the step:
 
 1. Connect your flowbox to your computer.
 2. Open the latest betaflight configurator (version 10.8.0 or newer).
@@ -118,4 +118,4 @@ set blackbox_mode = ALWAYS
 
 ## Use with flowshutter
 
-Check [flowshutter](flowshutter/flowshutter.md)
+Check [flowshutter](/docs/flowshutter/flowshutter.md)

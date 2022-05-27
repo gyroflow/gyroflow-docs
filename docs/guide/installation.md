@@ -1,4 +1,9 @@
+# Installation
+
 ## Minimum system requirements:
+
+Here are the Gyroflow minimum requirements:
+
 - Windows 10 64-bit (1809 or later)
     - Windows "N" versions: Install the "Media Feature Pack", go to Settings -> Apps -> Optional features -> Add a feature -> Select "Media Feature Pack" -> Click Install
 - macOS 10.14 or later (both Intel and Apple Silicon are supported natively)
@@ -13,10 +18,21 @@
         - AMD: `mesa-vdpau-drivers mesa-va-drivers mesa-opencl-icd libegl-mesa0 mesa-vulkan-drivers`
 - Android 6+
 
-## Releases
-Prebuilt executables are available for Windows, Mac, and Linux. These can be found on the [releases page](https://github.com/gyroflow/gyroflow/releases)
+## Official Releases
+
+Prebuilt executables are available for Windows, Mac, and Linux. These can be found on the [GitHub Releases](https://github.com/gyroflow/gyroflow/releases)
+
+
+## Nightly builds
+
+In some cases you may need to [download the latest nightly build](https://gyroflow.xyz/devbuild/?autodownload):
+
+- For example, a known bug was fixed in the nightly build and you need to use it urgently.
+- Or, you want to see how the latest committed translation actually works in the app, Whether the translation needs to be fine-tuned to match the overall translation style.
+
+In general, however, we discourage casually trying nightly builds unless you know what you're doing!
 
 
 ## Build local version
 
-For development purposes, a local version can be built. For instructions, see the [README on GitHub](https://github.com/gyroflow/gyroflow#development):
+For development purposes, a local version can be built. For the building instructions, see the [development section on GitHub](https://github.com/gyroflow/gyroflow#development):

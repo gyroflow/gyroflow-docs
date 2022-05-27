@@ -51,32 +51,36 @@ extra_css:
 
 nav:
     - Home: index.md
-    - User guide:
-        - Quick start guide: guide/quickstart.md
+    - Quick start:
+        - Getting Started: guide/quickstart.md
         - Installation: guide/installation.md
+        - Workflow: guide/workflow.md
+        - Settings Explanation: guide/settings.md
         - Camera Calibration: guide/calibration.md
-        - Settings: guide/settings.md
 
-    - Gyro Logging:
-        - General: logging/general.md
-        - Flowshutter:
-            - Overview: logging/flowshutter/flowshutter.md
-            - Settings: logging/flowshutter/settings.md
-            - List for Supported Camera: logging/flowshutter/camera list.md
-            - DIY camera jacks: logging/flowshutter/diy camera jacks.md
-        - Betaflight/INav/Cleanflight/etc.: logging/betaflight.md
-        - Flowbox: logging/flowbox.md
-        - Action cam as logger: logging/actioncamlogger.md
-        - Custom hardware/logger: logging/customlogger.md
-        - Gyroflow .gcsv reference: logging/gcsv.md
+    - Camera and Gyro Logging:
+        - Camera setup guides:
+            - General: cams/general.md
+            - GoPro: cams/gopro.md
+            - Runcam: cams/runcam.md
+            - Sony: cams/sony.md
+            - Insta360: cams/insta360.md
+            - Mobius: cams/mobius.md
+        - Gyro Logging:
+            - General: logging/general.md
+            - Betaflight/INav/Cleanflight/etc.: logging/betaflight.md
+            - Flowbox: logging/flowbox.md
+            - Action cam as logger: logging/actioncamlogger.md
+            - Custom hardware/logger: logging/customlogger.md
+            - Gyroflow .gcsv reference: logging/gcsv.md
 
-    - Camera setup guides:
-        - General: cams/general.md
-        - GoPro: cams/gopro.md
-        - Runcam: cams/runcam.md
-        - Sony: cams/sony.md
-        - Insta360: cams/insta360.md
-        - Mobius: cams/mobius.md
+    - Flowshutter:
+        - Overview: flowshutter/flowshutter.md
+        - Quick Start: flowshutter/quickstart.md
+        - Settings Explanation: flowshutter/settings.md
+        - Supported Hardware: flowshutter/hardware.md
+        - Supported Camera: flowshutter/clist.md
+        - Wiring to Camera: flowshutter/wiring.md
 
     - Plugins and integrations:
         - OpenFX Plugin: integrations/OpenFX.md
@@ -86,8 +90,11 @@ nav:
         - Orientations and smoothing: tech/smoothing.md
         - Rolling Shutter: tech/rollingshutter.md
         - Related Projects/Literature: tech/relatedprojects.md
+
     - Contribute to the project:
         - Gyroflow: contrib/gyroflow.md
         - Documentation: contrib/documentation.md
         - Support Gyroflow / Contributors list: contrib/support.md
+    
+    - FAQ: faq.md
 
