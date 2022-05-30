@@ -30,9 +30,9 @@ As the name implies, momentarily shorting a pin in one of the camera's port(s) t
 
 | Brand | Model | Support info | Notes | 
 | :---: | :---: | :---: | :---: |
-| Blackmagic Design | Pocket Cinema Camera 4k | yes | w/[ZITAY recording cable](https://www.zitay.net/ZITAY-BlackMagic-Design-Pocket-Cinema-Camera-4K-BMPCC-6K-Controlling-Cable-Controller-p931336.html) |
-| Blackmagic Design | Pocket Cinema Camera 6k | yes | w/[ZITAY recording cable](https://www.zitay.net/ZITAY-BlackMagic-Design-Pocket-Cinema-Camera-4K-BMPCC-6K-Controlling-Cable-Controller-p931336.html) |
-| Blackmagic Design | Pocket Cinema Camera 6k pro | yes | w/[ZITAY recording cable](https://www.zitay.net/ZITAY-BlackMagic-Design-Pocket-Cinema-Camera-4K-BMPCC-6K-Controlling-Cable-Controller-p931336.html) |
+| Blackmagic Design | Pocket Cinema Camera 4k | yes | w/[ZITAY recording cable](wiring.md#bmpcc-4k6k6k-pro-recording-cable-zitay) |
+| Blackmagic Design | Pocket Cinema Camera 6k | yes | w/[ZITAY recording cable](wiring.md#bmpcc-4k6k6k-pro-recording-cable-zitay) |
+| Blackmagic Design | Pocket Cinema Camera 6k pro | yes | w/[ZITAY recording cable](wiring.md#bmpcc-4k6k6k-pro-recording-cable-zitay) |
 | Kinefinity | MAVO Edge 6K | yes |
 | Kinefinity | MAVO Edge 8K | yes |
 | RED | DSMC2 | yes |

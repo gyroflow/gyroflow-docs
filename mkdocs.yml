@@ -12,6 +12,13 @@ theme:
   custom_dir: 'theme'
   name: material
   favicon: assets/images/favicon.png
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+    - navifation.tabs.sticky
+    - navigation.tracking
+    - navigation.expand
   logo: assets/images/logo_small_white.svg
   palette:
     - media: "(prefers-color-scheme: light)" 
@@ -59,15 +66,14 @@ nav:
         - Camera Calibration: guide/calibration.md
 
     - Camera and Gyro Logging:
+        - General: cams/general.md
         - Camera setup guides:
-            - General: cams/general.md
             - GoPro: cams/gopro.md
             - Runcam: cams/runcam.md
             - Sony: cams/sony.md
             - Insta360: cams/insta360.md
             - Mobius: cams/mobius.md
         - Gyro Logging:
-            - General: logging/general.md
             - Betaflight/INav/Cleanflight/etc.: logging/betaflight.md
             - Flowbox: logging/flowbox.md
             - Action cam as logger: logging/actioncamlogger.md
@@ -78,9 +84,10 @@ nav:
         - Overview: flowshutter/flowshutter.md
         - Quick Start: flowshutter/quickstart.md
         - Settings Explanation: flowshutter/settings.md
-        - Supported Hardware: flowshutter/hardware.md
-        - Supported Camera: flowshutter/clist.md
-        - Wiring to Camera: flowshutter/wiring.md
+        - Support Info:
+            - Supported Hardware: flowshutter/hardware.md
+            - Supported Camera: flowshutter/clist.md
+            - Wiring to Camera: flowshutter/wiring.md
 
     - Plugins and integrations:
         - OpenFX Plugin: integrations/OpenFX.md

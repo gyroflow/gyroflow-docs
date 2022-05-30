@@ -1,8 +1,13 @@
+---
+hide: 
+  - toc
+---
+
 # Getting Started with Gyroflow 1.0 +
 
 Welcome to the Gyroflow Quick Start Guide!
 
-Please use the Navigation Bar at the bottom of each page for a more step-by-step approach, or use the Navigation Menu at the left to get to a Hardware-specific Guide. Longer pages have a Table of Contents menu found on the right hand side of the page.
+Please use the Navigation Bar at the bottom of each page for a more step-by-step approach, or use the **Navigation Menu** on the **left** to get to a Hardware-specific Guide. Longer pages have a **Table of Contents** menu found on the **right** of the page.
 
 We hope these pages have been helpful and you enjoy using Gyroflow!
 
