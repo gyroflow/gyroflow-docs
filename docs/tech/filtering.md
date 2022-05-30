@@ -5,7 +5,7 @@ For number one, adequate filtering should be applied before the saving step in o
 
 
 ## Gyro-camera coupling
-The physical gyro should match the motion of the camera, meaning no or minimal play should be present between the two. This is not a problem for builtin gyro logging.
+The physical gyro should match the motion of the camera, meaning no or minimal play should be present between the two. This is not a problem for built-in gyro logging case.
 
 ## Filtering
 If no aliasing is present, the gyro data can be further filtered, assuming the sampling rate is sufficiently high. Roughly speaking, the frequencies of camera shake lie below 50 Hz. Frequencies above this could either be noise or high frequency signals resulting from high frequency, but low amplitude vibrations. 

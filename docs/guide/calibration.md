@@ -1,4 +1,10 @@
-The purpose of the camera calibration process is to accurately determine the _intrinsic_ parameters of a camera system. This consists of the focal length, lens distortions, and other misalignments during the imaging process. These parameters can be found through lens calibration, which consists of imaging a known pattern, and analyzing the resulting footage. The Gyroflow lens calibrator looks like this:
+The purpose of the camera calibration process is to accurately determine the _intrinsic_ parameters of a camera system. This consists of:
+
+- focal length
+- lens distortions
+- other misalignments during the imaging process.
+
+These parameters can be found through **Lens Calibration**, which consists of imaging a known pattern, and analyzing the resulting footage. The Gyroflow lens calibrator looks like this:
 
 ![!](img/screenshot_calibration.jpg){ width="100%" }
 
