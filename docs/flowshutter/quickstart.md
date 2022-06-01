@@ -9,7 +9,7 @@ If you are using a DIY flowshutter, then you should clearly separate your flight
 
 Although hardware from different manufacturers varies, their main components should be the same - necessary parts of the flowshutter device/firmware to work properly.
 
-At the time of writing this page, I only have the commercial version of NeutronRC hardware - **NeutronRC SDB**, so this page will give you a quick start based on that.
+At the time of writing this page, I only have the commercial version of NeutronRC hardware - [**NeutronRC SDB**](hardware.md#neutronrc-sdb), so this page will give you a quick start based on that.
 
 ![](img/nerc_sdb_overview.png)
 
@@ -88,7 +88,7 @@ Then the FC will become a readable USB drive, and you can copy the motion data f
 
 For some special reason, it may be necessary to flash a new firmware in some cases, such as:
 
-- New firmware adds control support to your camera
+- The new firmware adds control support to your camera
 - The new firmware has features you desperately need
 - The new firmware fixes a bug you're currently experiencing
 

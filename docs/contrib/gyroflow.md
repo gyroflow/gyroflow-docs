@@ -1,4 +1,11 @@
-For contributing to the main Gyroflow program, refer to the [Github repository](https://github.com/adrianeddy/gyroflow). Feature requests can be submitted by opening issues, and new features can be added through pull requests.
+---
+hide: 
+  - toc
+---
+
+# Contribute to Gyroflow
+
+For contributing to the main Gyroflow program, refer to the [Github repository](https://github.com/gyroflow/gyroflow). Feature requests can be submitted by opening issues, and new features can be added through pull requests.
 
 Another way of contributing to the project is by helping translate the program to your language. This is done through _crowdin_: [https://crowdin.com/project/gyroflow](https://crowdin.com/project/gyroflow).
 

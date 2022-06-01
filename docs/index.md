@@ -1,3 +1,9 @@
+---
+hide:
+  - navigation
+  - toc
+---
+
 # Welcome to the Gyroflow Docs!
 
 [Return to gyroflow.xyz](https://gyroflow.xyz){ .md-button .md-button--primary}
