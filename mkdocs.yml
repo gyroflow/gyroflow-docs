@@ -91,7 +91,7 @@ nav:
             - Wiring to Camera: flowshutter/wiring.md
 
     - Plugins/integrations/tools:
-        - List of tools: integrations/OpenFX.md
+        - List of tools: integrations/integrations.md
 
     - Technical info:
         - Filtering and noise: tech/filtering.md
