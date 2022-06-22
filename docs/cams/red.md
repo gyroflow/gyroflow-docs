@@ -1,20 +1,28 @@
 !!! warning
 
-	Support for native IMU metadata from RED is still under development and not ready yet
+	While most RED cameras have the required hardware for gyro logging, not all of them have this feature enabled yet.
 
-Some cameras from RED cinema save motion data, either on a per-frame basis, or asynchronously (faster sample rate in theory).
+Some cameras from RED cinema save motion data, either on a per-frame basis, or asynchronously (faster sample rate).
 
-The official way of viewing this metadata is using `REDLine`, a command-line utility bundled with REDCINE-X PRO ([Windows](https://www.red.com/download/redcine-x-pro-win), [MacOS](https://www.red.com/download/redcine-x-pro-mac)) or standalone program ([Linux](https://www.red.com/download/redline-linux-beta)).
+
+The official way of viewing this metadata is using `REDLine`, a command-line utility bundled with REDCINE-X PRO ([Windows](https://www.red.com/download/redcine-x-pro-win), [MacOS](https://www.red.com/download/redcine-x-pro-mac)) or standalone program ([Linux](https://www.red.com/download/redline-linux-beta)). Make sure you have the newest version installed.
 
 Footage from the following cameras are known to contain per-frame motion data:
 
 * RED RAVEN
 * ???
 
-Footage from the following cameras might contain asynchronous motion data:
+Footage from the following cameras contain asynchronous motion data:
 
-* RED V-RAPTOR?? (Mentioned in REDline release notes, no data found in available sample clips)
+* RED V-RAPTOR
 * ??
+
+## Use RED gyro metadata for stabilization
+
+Firstly, make sure the newest firmware is installed, older firmwares may not have the gyro logging enabled. And make sure the newest version of REDline/REDCINE-X PRO is installed. If gyro data is available (see next section), the [redgyro](https://github.com/gyroflow/redgyro) script can be used to extract and save the gyro data to a [`.gcsv`](/logging/gcsv/) file which can be loaded into Gyroflow.
+
+Note: The logging rate for cameras using per-frame metadata is the framerate. This means 24fps footage has gyro data logged at 24 Hz. Such a low logging rate may be insufficient for effective stabilization (depending on type of filming), so make sure to test everything before production. See [action cam as logger](/logging/actioncamlogger/) for an alternative logging option.
+
 
 ## View RED metadata
 
@@ -56,4 +64,3 @@ This yields the following for a clip without this data:
 [02-07-22-24-33-066]<69f4> Clip does not have async IMU data
 ```
 
-The result of files _with_ this metadata is currently unknown.

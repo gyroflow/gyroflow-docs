@@ -73,6 +73,7 @@ nav:
             - Sony: cams/sony.md
             - Insta360: cams/insta360.md
             - Mobius: cams/mobius.md
+            - RED Cinema: cams/red.md
         - Gyro Logging:
             - Betaflight/INav/Cleanflight/etc.: logging/betaflight.md
             - Flowbox: logging/flowbox.md
@@ -89,8 +90,8 @@ nav:
             - Supported Camera: flowshutter/clist.md
             - Wiring to Camera: flowshutter/wiring.md
 
-    - Plugins and integrations:
-        - OpenFX Plugin: integrations/OpenFX.md
+    - Plugins/integrations/tools:
+        - List of tools: integrations/OpenFX.md
 
     - Technical info:
         - Filtering and noise: tech/filtering.md
