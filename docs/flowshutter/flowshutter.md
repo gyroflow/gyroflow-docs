@@ -28,6 +28,7 @@ For more info about list of supported hardware, please check [Supported Hardware
 - Sony Multi-Terminal Port USB Protocol
 - Momentary Ground
 - 3.3V Schmitt Trigger
+- ZCAM UART protocol
 - (WIP) 5V Schmitt Trigger
 - (WIP) Sony LANC protocol
 - (WIP) HDMI CEC protocol
