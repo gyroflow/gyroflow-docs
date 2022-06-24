@@ -102,8 +102,7 @@ The following will briefly introduce the steps of firmware upgrade for you in th
 4. Open uPyCraft IDE
 5. Connect Flowshutter USB to your computer
 6. `uPyCraft IDE` -> `Tools` -> `BurnFirmware`
-7. Configure burning parameters as below:
-
+7. Configure burning parameters as below: ![](img/flash_flowshutter_firmware.png)
 8. Hit `OK` and wait until it finishes 
 
 ### Flash FC firmware

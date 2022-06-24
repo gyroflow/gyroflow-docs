@@ -33,6 +33,7 @@ As the name implies, momentarily shorting a pin in one of the camera's port(s) t
 | Blackmagic Design | Pocket Cinema Camera 4k | yes | w/[ZITAY recording cable](wiring.md#bmpcc-4k6k6k-pro-recording-cable-zitay) |
 | Blackmagic Design | Pocket Cinema Camera 6k | yes | w/[ZITAY recording cable](wiring.md#bmpcc-4k6k6k-pro-recording-cable-zitay) |
 | Blackmagic Design | Pocket Cinema Camera 6k pro | yes | w/[ZITAY recording cable](wiring.md#bmpcc-4k6k6k-pro-recording-cable-zitay) |
+| Kinefinity | MAVO LF 6k | yes |
 | Kinefinity | MAVO Edge 6K | yes |
 | Kinefinity | MAVO Edge 8K | yes |
 | RED | DSMC2 | yes |
@@ -54,5 +55,20 @@ Pull a pin of a port to 3.3V level to start REC, and pull it back to 0V to stop 
 | :---: | :---: | :---: |
 | RED | DSMC | yes |
 | RED | DSMC2 | yes |
+
+## ZCAM UART protocol
+
+All ZCAM cameras are theoretically supported, but have only been verified on the E2 series.
+
+| Model | Support info | Note |
+| :---: | :---: | :---: |
+| E2    | yes | |
+| E2C   | no  | |
+| E2G   | yes | |
+| E2-M4 | yes | |
+| E2-S6 | yes | |
+| E2-F6 | yes | |
+| E2-F8 | yes | |
+| E2-S6G| yes | |
 
 ## TODO
