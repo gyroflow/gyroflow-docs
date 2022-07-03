@@ -8,9 +8,9 @@ These parameters can be found through **Lens Calibration**, which consists of im
 
 ![!](img/screenshot_calibration.jpg){ width="100%" }
 
-## Video guide (outdated)
-The calibration process between 0.3.0-beta and 1.0 is overall pretty similar, with the previously created presets being compatible with the new version of the software.
-<iframe width="560" height="315" src="https://www.youtube.com/embed/f4YD5pGmnxM?start=412" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+## Video Guide
+Nurk FPV's tutorial contains a calibration example:
+<iframe width="560" height="315" src="https://www.youtube.com/embed/QAds3x8UU1w?start=453" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Getting calibration footage
 1. Display the calibration pattern on a flat computer monitor, preferably in full screen (available from the lens calibrator utility). You can also print it out if you prefer. In general, larger calibration patterns are preferred since focus will be closer to the focus during actual use. A bright screen with a slightly darkened room works well.
@@ -22,8 +22,14 @@ The calibration process between 0.3.0-beta and 1.0 is overall pretty similar, wi
    * Each edge of video frame aligned with edge of chessboard.
    * Corner of chessboard aligned with corner of video.
 
-The default (14x8) calibration pattern is also available below:
+
+The calibration pattern can be displayed from the calibration utility. Alternatively, the default (14x8 radon) calibration pattern is available here:
+![!](img/calibration_pattern_radon_14x8.png){ width="100%" }
+
+The previous default (14x8 chessboard) calibration pattern is also available below:
 ![!](img/calibration_pattern_14x8.png){ width="100%" }
+
+Tip: Larger calibration patterns allow for more representative focal distance. Try using the largest screen available, especially with larger lenses.
 
 ## Creating camera preset
 1. Start the Gyroflow tool and click `create new` under the lens profile tab.
