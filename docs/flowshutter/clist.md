@@ -60,15 +60,11 @@ Pull a pin of a port to 3.3V level to start REC, and pull it back to 0V to stop 
 
 All ZCAM cameras are theoretically supported, but have only been verified on the E2 series.
 
-| Model | Support info | Note |
-| :---: | :---: | :---: |
-| E2    | yes | |
-| E2C   | no  | |
-| E2G   | yes | |
-| E2-M4 | yes | |
-| E2-S6 | yes | |
-| E2-F6 | yes | |
-| E2-F8 | yes | |
-| E2-S6G| yes | |
+| Model | Support info | Note | Model | Support info | Note |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| E2    | yes | | E2-S6 | yes | |
+| E2C   | no  | | E2-F6 | yes | |
+| E2G   | yes | | E2-F8 | yes | |
+| E2-M4 | yes | | E2-S6G| yes | |
 
 ## TODO
