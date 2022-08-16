@@ -50,7 +50,8 @@ Breaking this down:
 	- Multiplying `tscale` by the raw `t` values should give the time in **seconds**. It can thus be deduced that the file above is logging at 1000 Hz.
 	- Multiplying `ascale` by the raw `ax/ay/az` values should give the acceleration in **g**
 	- Multiplying `gscale` by the raw `gx/gy/gz` values should give the angular rate in **rad/s**
-7. The rest of the file simply consists of a standard CSV header and the raw values. Note that fixed-point integers are used with a scalar in order to avoid excessively large text files. Using floating points here is still valid though.
+7. The rest of the file simply consists of a standard CSV header and the raw values. The header and data order should be one of the following: `t,gx,gy,gz`, ``t,gx,gy,gz,ax,ay,az``, or ``t,gx,gy,gz,ax,ay,az,mx,my,mz``. Acceleration data is required for horizon lock, while magnetometer data is currently not of significant importance.
+8. For the data itself, fixed-point integers are recommended with a scalar (point 6) in order to avoid excessively large text files. Using floating points here is still valid though. 
 
 The required parts of the header of the `.gcsv` file remains static for a given camera/setup, and can thus be written as a constant string to the file.
 
@@ -87,3 +88,11 @@ For a logger/camera implementation, some other things to think about:
 For the IMU Orientation string, the following figure corresponds to `YxZ`.
 
 ![!](img/example_axes.png){ width="100%" }
+
+* For the gyroscope, data for an axis correspond to the right-handed rotation rate of the camera body about that axis.
+* The accelerometer data correspond to linear acceleration applied in the given direction. Due to the nature of gravity, a stationary object will experience an *upwards* acceleration of 9.81 m/s<sup>2</sup>, while an object in freefall will experience *zero* acceleration.
+* The magnetometer data corresponds to the measured magnetic field vector.
+
+In order for orientation determination to work correctly, the data must have the same/aligned coordinate axes. For combined IMU sensors, this is already the case for the raw data. If a rotation is applied to the gyro data before being written, the same rotation should be applied to the accelerometer (and magnetometer). This ensures that the axes stay aligned.
+
+If the gyroscope and accelerometer data come from separate sensors, their axes must similarly be aligned, either physically or by applying a rotation in software.
