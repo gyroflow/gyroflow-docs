@@ -11,12 +11,11 @@ It was designed to be used with the Gyroflow software to provide you one of the 
 - **"Audio injection"** - inject sync marker to the audio track for precise synchronization between video and gyro data
 - **OLED Display** - show the device information and allow user to change settings without hacking the firmware code
 - Blackbox Erasion - erase all blackbox data without connecting to the computer
-- OTA Update - (WIP) update the firmware over the air
 
 
 ## Supported Hardware
 
-Currently we are working NeutronRC for a small range of sales in China. Subsequent versions are in production, please stay tuned.
+NeutronRC has been continuously cooperating with us on commercial hardware development, and their commercial version of flowshutter is our first recommended choice.
 
 ![](img/nerc_sdb_pic.jpg)
 
@@ -29,11 +28,14 @@ For more info about list of supported hardware, please check [Supported Hardware
 - Momentary Ground
 - 3.3V Schmitt Trigger
 - ZCAM UART protocol
+- Sony LANC protocol*
 - (WIP) 5V Schmitt Trigger
-- (WIP) Sony LANC protocol
 - (WIP) HDMI CEC protocol
 
 Check out our list of [Supported Camera](clist.md) for more details.
+
+!!! note "Note"
+    * Sony LANC protocol need an extra LANC controller, an Arduino example code is available [here](https://github.com/gyroflow/flowshutter/blob/master/tools/LANC.ino).
 
 ### Compatible FC
 

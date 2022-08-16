@@ -29,7 +29,8 @@ NeutronRC Stabilization Data Box
 ### Links
 
 - [Taobao (淘宝)](https://item.taobao.com/item.htm?ft=t&id=673585945144)
-- Other sources/links are on the way!
+- [AliExpress](https://www.aliexpress.com/item/1005004626947429.html)
+- [NewBeeDrone](https://newbeedrone.com/) will be one of the resellers of this product soon!
 
 ## DIY (FC Sized)
 
