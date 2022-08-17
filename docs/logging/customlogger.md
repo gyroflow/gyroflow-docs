@@ -11,9 +11,9 @@ For a dedicated logger, a simple combination of a memory device (MicroSD/SPI Fla
 On the software and firmware side, the inertial measurement unit should be configured correctly. Refer to the datasheet of your IMU for information about how to configure this exactly. It has been found that the following IMU settings offer a reasonable starting point.
 
 * logging rate: 500 Hz
-* Low pass filter cutoff: 100 Hz
+* Low pass filter cutoff: 50 to 100 Hz
 * gyro scaling: 1000 deg/s
-* acceleration scaling: +/- 4 g
+* acceleration scaling: +/- 8 g
 
 The minimum logging rate sufficient for stabilization is approximately 100 Hz, but note that such a low logging rate requires excellent filtering in order to avoid data loss and aliasing. Using a 500 Hz logging rate with a 100 Hz cutoff allows for some margin of error in terms of aliasing.
 
