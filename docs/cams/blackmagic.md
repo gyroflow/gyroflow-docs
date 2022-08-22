@@ -1,5 +1,3 @@
-Blackmagic Pocket 4K/6K cameras recently got a firmware update in order to enable gyro metadata logging (Camera firmware 7.9). Furthermore, the latest Resolve 18 beta release has added a feature to apply gyro-based stabilization.
+Blackmagic Pocket 4K/6K cameras recently got a firmware update in order to enable gyro metadata logging (Camera firmware 7.9). Furthermore, the latest Resolve 18 beta release has added a feature to apply gyro-based stabilization. The latest [development builds](gyroflow.xyz/devbuild/) of Gyroflow allow the use of BRAW with this metadata.
 
-[Announcement video](https://www.youtube.com/watch?v=xnEFUHm4mvc)
-
-More information will be added here regarding use with Gyroflow etc.
+Furthermore, Gyroflow also allows playback and analysis of BRAW footage directly, which streamlines the workflow compared to analysing a proxy. Note that Gyroflow doesn't allow rendering this footage. Instead the recommended workflow uses the [OpenFX plugin](https://github.com/gyroflow/gyroflow-ofx) in combination with Gyroflow for lossless image stabilization. 

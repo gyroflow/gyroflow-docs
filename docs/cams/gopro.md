@@ -3,6 +3,8 @@ From the GoPro Hero 5 and onwards, the [GPMF](https://github.com/gopro/gpmf-pars
 ## General
 All GoPros use 4:3 sensors and allow for different field of views. For Gyroflow stabilization, the best resolutions are 4:3 resolutions with the `wide` field of view. This gives Gyroflow the most image data to work with.
 
+By default, GoPro files are limited to 4 GB in size. For longer files, use either the [GoPro Labs large chapter support](https://gopro.github.io/labs/control/chapters/), or use [ReelSteady-Joiner](https://github.com/rubegartor/ReelSteady-Joiner) to join segmented files together.
+
 ## Hero 8/9/10
 These cameras all contain pre-computed camera orientations for every single frame, meaning the synchronisation step can be skipped when using the `None` integration method. Footage from these cameras are essentially "plug and play" when it comes to Gyroflow stabilization, since Gyroflow contains built-in lens profiles for all these cameras. Furthermore, since these cameras do internal rolling shutter processing, additional rolling shutter correction is not required.
 

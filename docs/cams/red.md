@@ -2,10 +2,7 @@
 
 	While most RED cameras have the required hardware for gyro logging, not all of them have this feature enabled yet.
 
-Some cameras from RED cinema save motion data, either on a per-frame basis, or asynchronously (faster sample rate).
-
-
-The official way of viewing this metadata is using `REDLine`, a command-line utility bundled with REDCINE-X PRO ([Windows](https://www.red.com/download/redcine-x-pro-win), [MacOS](https://www.red.com/download/redcine-x-pro-mac)) or standalone program ([Linux](https://www.red.com/download/redline-linux-beta)). Make sure you have the newest version installed.
+Some cameras from RED cinema save motion data, either on a per-frame basis, or asynchronously (faster sample rate). This data is supported by Gyroflow in the [development builds](https://gyroflow.xyz/devbuild/)
 
 Footage from the following cameras are known to contain per-frame motion data:
 
@@ -17,16 +14,9 @@ Footage from the following cameras contain asynchronous motion data:
 * RED V-RAPTOR
 * ??
 
-## Use RED gyro metadata for stabilization
+## View RED metadata manually
+If you wish to view the RED metadata without using Gyroflow, you can use REDline, a command-line utility bundled with REDCINE-X PRO ([Windows](https://www.red.com/download/redcine-x-pro-win), [MacOS](https://www.red.com/download/redcine-x-pro-mac)) or standalone program ([Linux](https://www.red.com/download/redline-linux-beta)). See how to install and launch REDline based on your operating system in this [guide](http://docs.red.com/955-0004/REDCINE-XProOperationGuide/Content/11_REDLINE/LaunchRedline.htm).
 
-Firstly, make sure the newest firmware is installed, older firmwares may not have the gyro logging enabled. And make sure the newest version of REDline/REDCINE-X PRO is installed. If gyro data is available (see next section), the [redgyro](https://github.com/gyroflow/redgyro) script can be used to extract and save the gyro data to a [`.gcsv`](/logging/gcsv/) file which can be loaded into Gyroflow.
-
-Note: The logging rate for cameras using per-frame metadata is the framerate. This means 24fps footage has gyro data logged at 24 Hz. Such a low logging rate may be insufficient for effective stabilization (depending on type of filming), so make sure to test everything before production. See [action cam as logger](/logging/actioncamlogger/) for an alternative logging option.
-
-
-## View RED metadata
-
-See how to install and launch REDline based on your operating system in this [guide](http://docs.red.com/955-0004/REDCINE-XProOperationGuide/Content/11_REDLINE/LaunchRedline.htm).
 
 In order to view the per-frame metadata for a video file, run:
 

@@ -1,3 +1,5 @@
+This page contains tools or projects designed to work with Gyroflow.
+
 ## Gyroflow OpenFX
 
 The Gyroflow OpenFX plugin allows for applying stabilization using a `.gyroflow` file to a video directly in a video editor such as Davinci Resolve. This allows for stabilizing RAW and specialised video formats. This plugin is under development by [Ilya Epifanov](https://github.com/ilya-epifanov). Downloads and instructions can be found on the GitHub Repository:

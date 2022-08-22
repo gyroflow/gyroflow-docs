@@ -75,6 +75,7 @@ nav:
             - Mobius: cams/mobius.md
             - RED Cinema: cams/red.md
             - Blackmagic: cams/blackmagic.md
+            - Smartphones: cams/smartphones.md
         - Gyro Logging:
             - Betaflight/INav/Cleanflight/etc.: logging/betaflight.md
             - Flowbox: logging/flowbox.md
