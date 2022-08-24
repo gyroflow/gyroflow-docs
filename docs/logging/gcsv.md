@@ -8,7 +8,7 @@ The `.gcsv` file contains information about the gyro orientation, scaling, and a
 
 ```
 GYROFLOW IMU LOG
-version,1.2
+version,1.3
 id,custom_logger_name
 orientation,YxZ
 note,development_test
@@ -17,6 +17,7 @@ timestamp,1644159993
 vendor,potatocam
 videofilename,videofilename.mp4
 lensprofile,potatocam/potatocam_mark1_prime_7_5mm_4k
+lens_info,wide
 frame_readout_time,15.23
 frame_readout_direction,0
 tscale,0.001
@@ -44,7 +45,7 @@ t,gx,gy,gz,ax,ay,az
 If a magnetometer is present, some additional fields are present, e.g.:
 ```
 GYROFLOW IMU LOG
-version,1.2
+version,1.3
 id,custom_logger_name
 orientation,YxZ
 note,development_test
@@ -66,7 +67,7 @@ t,gx,gy,gz,ax,ay,az,mx,my,mz
 ### Mandatory fields:
 
 1. The very first line identifies the file as an IMU log. This line should either be `GYROFLOW IMU LOG` or the more neutral `CAMERA IMU LOG`.
-2. The second line `version,1.2` describes the "version" of the .gcsv file format. This is equal to `1.2` for now. The versions are backwards compatible, but changes with the addition of new metadata fields.
+2. The second line `version,1.3` describes the "version" of the .gcsv file format. This is equal to `1.3` for now. The versions are backwards compatible, but changes with the addition of new metadata fields.
 3. The third line contains a unique ID associated with the logger/camera. For instance a high-end camera with internal logging may use `id,potatocam_deluxe_4k_grey_edition`.
 4. The fourth line contains the orientation string. This corresponds to the `IMU Orientation` field in Gyroflow (see the implementation notes below for further details).
 5. The next few lines contain optional metadata. These are not strictly required, but may improve workflow and stabilization. Developers are thus encouraged to include all known fields.
@@ -87,6 +88,7 @@ The following are all optional fields for the metadata block, but developers sho
 * `vendor` can contain the vendor or developer
 * `videofilename` is the name of the corresponding video file. Normally the `.gcsv` file name already matches, but this insures the information is kept if the filename changes.
 * `lensprofile` is the unique name of the lens preset and vendor folder. If it matches a lens profile in the [database](https://github.com/gyroflow/gyroflow/tree/master/resources/camera_presets) it is automatically selected during loading.
+* `lens_info` is additional information about the lens/field of view not available in the metadata. This could be `wide`, `normal`, `narrow` for different FOV settings, `linear` for lens distortion correction. Most relevant for action cameras with different crop settings.
 * `frame_readout_time` is the time in milliseconds it takes to capture a full video frame using rolling shutter. This is used for rolling shutter correction.
 * `frame_readout_direction` is the direction of the readout. Most cameras with rolling shutter capture the top of the frame first. Note that Gyroflow currently only supports correcting 0 and 1.
 	- 0: Top to bottom
@@ -122,3 +124,4 @@ If the gyroscope and accelerometer data come from separate sensors, their axes m
 * 1.0: Initial version
 * 1.1: Add lens profile field
 * 1.2: Add rolling shutter information
+* 1.3: Add `lens_info` field
