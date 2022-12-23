@@ -11,3 +11,9 @@ The Gyroflow OpenFX plugin allows for applying stabilization using a `.gyroflow`
 Gyroflow to CSV by [EmberLightVFX](https://github.com/EmberLightVFX) can convert Gyroflow project files to a CSV format containing the camera motion. This can be imported in software such as Blackmagic Fusion and may be used for VFX work.
 
 [Gyroflow to CSV](https://github.com/EmberLightVFX/GyroFlow-to-CSV){ .md-button .md-button--primary}
+
+## Gyroflow Toolbox
+
+Gyroflow Toolbox by [latenitefilms](https://github.com/latenitefilms) allows you to import Gyroflow Projects directly into Apple's Final Cut Pro.
+
+[Gyroflow Toolbox](https://github.com/latenitefilms/GyroflowToolbox){ .md-button .md-button--primary}
