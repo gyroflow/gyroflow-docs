@@ -1,8 +1,8 @@
 !!! warning
 
-	While most RED cameras have the required hardware for gyro logging, not all of them have this feature enabled yet.
+	While most RED cameras have the required hardware for gyro logging, not all of them have this feature enabled.
 
-Some cameras from RED cinema save motion data, either on a per-frame basis, or asynchronously (faster sample rate). This data is supported by Gyroflow in the [development builds](https://gyroflow.xyz/devbuild/)
+Some cameras from RED cinema save motion data, either on a per-frame basis, or asynchronously (faster sample rate). This data is supported by Gyroflow.
 
 Footage from the following cameras are known to contain per-frame motion data:
 
@@ -12,7 +12,25 @@ Footage from the following cameras are known to contain per-frame motion data:
 Footage from the following cameras contain asynchronous motion data:
 
 * RED V-RAPTOR
+* RED KOMODO
 * ??
+
+Make sure the camera firmware is updated, since older firmware versions may not have gyro logging enabled.
+
+## Stabilize RED footage with Gyroflow
+In order to get the most out of RED footage, the following workflow is recommended:
+
+1. Transcode from R3D to ProRes. The resulting file can be loaded in Gyroflow as the video file
+2. Load the original .R3D in the "Motion data" section.
+3. Load the correct lens profile and do autosync.
+4. You can then render as ProRes or export a project file and open it in DaVinci Resolve with Gyroflow-OFX plugin and the original .R3D file to have full color control and stabilization inside Resolve without any quality loss
+
+Tips for KOMODO specifically:
+* Estimate gyro bias: Find a place where camera is not moving at all, right click on timeline and **Estimate gyro bias here** to calibrate the gyroscope
+* Enable rolling shutter correction and set frame readout time to 0.01ms (global shutter)
+* Do autosync, or better find 2-3 points on the timeline with significant motion and right click -> Autosync here
+* If it's shaky, remove the sync point and try in a different place
+
 
 ## View RED metadata manually
 If you wish to view the RED metadata without using Gyroflow, you can use REDline, a command-line utility bundled with REDCINE-X PRO ([Windows](https://www.red.com/download/redcine-x-pro-win), [MacOS](https://www.red.com/download/redcine-x-pro-mac)) or standalone program ([Linux](https://www.red.com/download/redline-linux-beta)). See how to install and launch REDline based on your operating system in this [guide](http://docs.red.com/955-0004/REDCINE-XProOperationGuide/Content/11_REDLINE/LaunchRedline.htm).
