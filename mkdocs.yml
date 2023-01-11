@@ -69,6 +69,7 @@ nav:
         - General: cams/general.md
         - Camera setup guides:
             - GoPro: cams/gopro.md
+            - DJI: cams/dji.md
             - Runcam: cams/runcam.md
             - Sony: cams/sony.md
             - Insta360: cams/insta360.md
