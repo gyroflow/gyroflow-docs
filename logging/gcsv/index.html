@@ -1,0 +1,1525 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../customlogger/">
+      
+      
+        <link rel="next" href="../../flowshutter/flowshutter/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+    
+    
+      
+        <title>Gyroflow .gcsv reference - Gyroflow</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
+    
+    <script src="../../js/lightgallery.min.js"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gcsv-gyro-log-format" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://gyroflow.xyz" title="Gyroflow" class="md-header__button md-logo" aria-label="Gyroflow" data-md-component="logo">
+      
+  <img src="../../assets/images/logo_small_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gyroflow
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Gyroflow .gcsv reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gyroflow/gyroflow" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide/quickstart/" class="md-tabs__link">
+        Quick start
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cams/general/" class="md-tabs__link md-tabs__link--active">
+        Camera and Gyro Logging
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../flowshutter/flowshutter/" class="md-tabs__link">
+        Flowshutter
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../integrations/integrations/" class="md-tabs__link">
+        Plugins/integrations/tools
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tech/filtering/" class="md-tabs__link">
+        Technical info
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contrib/gyroflow/" class="md-tabs__link">
+        Contribute to the project
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faq/" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gyroflow.xyz" title="Gyroflow" class="md-nav__button md-logo" aria-label="Gyroflow" data-md-component="logo">
+      
+  <img src="../../assets/images/logo_small_white.svg" alt="logo">
+
+    </a>
+    Gyroflow
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gyroflow/gyroflow" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Quick start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quick start" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Quick start
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/quickstart/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/workflow/" class="md-nav__link">
+        Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/settings/" class="md-nav__link">
+        Settings Explanation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/calibration/" class="md-nav__link">
+        Camera Calibration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Camera and Gyro Logging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Camera and Gyro Logging" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Camera and Gyro Logging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Camera setup guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Camera setup guides" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Camera setup guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/gopro/" class="md-nav__link">
+        GoPro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/dji/" class="md-nav__link">
+        DJI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/runcam/" class="md-nav__link">
+        Runcam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/sony/" class="md-nav__link">
+        Sony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/insta360/" class="md-nav__link">
+        Insta360
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/mobius/" class="md-nav__link">
+        Mobius
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/red/" class="md-nav__link">
+        RED Cinema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/blackmagic/" class="md-nav__link">
+        Blackmagic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/smartphones/" class="md-nav__link">
+        Smartphones
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Gyro Logging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Gyro Logging" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Gyro Logging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../betaflight/" class="md-nav__link">
+        Betaflight/INav/Cleanflight/etc.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flowbox/" class="md-nav__link">
+        Flowbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../actioncamlogger/" class="md-nav__link">
+        Action cam as logger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../customlogger/" class="md-nav__link">
+        Custom hardware/logger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Gyroflow .gcsv reference
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Gyroflow .gcsv reference
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gcsv-gyro-log-format" class="md-nav__link">
+    .gcsv gyro log format
+  </a>
+  
+    <nav class="md-nav" aria-label=".gcsv gyro log format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-fields" class="md-nav__link">
+    Mandatory fields:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-fields" class="md-nav__link">
+    Optional fields:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-notes" class="md-nav__link">
+    Implementation notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-changelog" class="md-nav__link">
+    Version changelog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Flowshutter
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Flowshutter" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Flowshutter
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flowshutter/flowshutter/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flowshutter/quickstart/" class="md-nav__link">
+        Quick Start
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flowshutter/settings/" class="md-nav__link">
+        Settings Explanation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Support Info
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Support Info" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support Info
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flowshutter/hardware/" class="md-nav__link">
+        Supported Hardware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flowshutter/clist/" class="md-nav__link">
+        Supported Camera
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../flowshutter/wiring/" class="md-nav__link">
+        Wiring to Camera
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Plugins/integrations/tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Plugins/integrations/tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Plugins/integrations/tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/integrations/" class="md-nav__link">
+        List of tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Technical info
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Technical info" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Technical info
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/filtering/" class="md-nav__link">
+        Filtering and noise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/smoothing/" class="md-nav__link">
+        Orientations and smoothing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/rollingshutter/" class="md-nav__link">
+        Rolling Shutter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/relatedprojects/" class="md-nav__link">
+        Related Projects/Literature
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Contribute to the project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute to the project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute to the project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contrib/gyroflow/" class="md-nav__link">
+        Gyroflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contrib/documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contrib/support/" class="md-nav__link">
+        Support Gyroflow / Contributors list
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gcsv-gyro-log-format" class="md-nav__link">
+    .gcsv gyro log format
+  </a>
+  
+    <nav class="md-nav" aria-label=".gcsv gyro log format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-fields" class="md-nav__link">
+    Mandatory fields:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optional-fields" class="md-nav__link">
+    Optional fields:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#implementation-notes" class="md-nav__link">
+    Implementation notes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#version-changelog" class="md-nav__link">
+    Version changelog
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+  <h1>Gyroflow .gcsv reference</h1>
+
+<h2 id="gcsv-gyro-log-format"><code>.gcsv</code> gyro log format</h2>
+<p>What follows is a text-based gyro log format that can be implemented in custom hardware/firmware called <code>.gcsv</code> (short for gyro csv or Gyroflow csv). As a text-based format this is meant to be easily implementable and inspectable (compatible with standard CSV reading software) at the cost of space efficiency.</p>
+<p>Firstly, for a video file called <code>videofilename.mp4</code>, the corresponding gyro log file is <code>videofilename.gcsv</code>, this is a case of the <code>.gcsv</code> acting as <a href="https://en.wikipedia.org/wiki/Sidecar_file">sidecar files</a>. This allows for automatic log detection.</p>
+<p>The <code>.gcsv</code> file contains information about the gyro orientation, scaling, and a unique identifier. The following is an example of a .gcsv file from a logger supporting logging of gyro and accelerometer:</p>
+<p><div class="highlight"><pre><span></span><code>GYROFLOW IMU LOG
+version,1.3
+id,custom_logger_name
+orientation,YxZ
+note,development_test
+fwversion,FIRMWARE_0.1.0
+timestamp,1644159993
+vendor,potatocam
+videofilename,videofilename.mp4
+lensprofile,potatocam/potatocam_mark1_prime_7_5mm_4k
+lens_info,wide
+frame_readout_time,15.23
+frame_readout_direction,0
+tscale,0.001
+gscale,0.00122173047
+ascale,0.00048828125
+t,gx,gy,gz,ax,ay,az
+0,39,86,183,-1137,-15689,-2986
+1,56,100,202,-1179,-15694,-2887
+2,63,108,218,-1247,-15702,-2794
+3,71,108,243,-1308,-15675,-2727
+4,83,101,268,-1420,-15662,-2661
+5,101,93,294,-1575,-15661,-2629
+6,121,95,319,-1677,-15654,-2639
+7,143,97,348,-1709,-15673,-2654
+8,163,98,362,-1704,-15691,-2685
+9,173,93,371,-1678,-15698,-2736
+10,181,98,375,-1623,-15697,-2810
+11,173,105,365,-1578,-15693,-2929
+12,159,111,363,-1555,-15711,-3057
+13,157,113,348,-1540,-15747,-3159
+14,157,118,327,-1542,-15780,-3246
+15,153,123,310,-1595,-15812,-3319
+...
+</code></pre></div>
+If a magnetometer is present, some additional fields are present, e.g.:
+<div class="highlight"><pre><span></span><code>GYROFLOW IMU LOG
+version,1.3
+id,custom_logger_name
+orientation,YxZ
+note,development_test
+fwversion,FIRMWARE_0.1.0
+timestamp,1644159993
+vendor,potatocam
+videofilename,videofilename.mp4
+lensprofile,potatocam_mark1_prime_7_5mm_4k
+tscale,0.001
+gscale,0.00122173047
+ascale,0.00048828125
+mscale,0.00059875488
+t,gx,gy,gz,ax,ay,az,mx,my,mz
+0,39,86,183,-1137,-15689,-2986,123,345,546
+1,56,100,202,-1179,-15694,-2887,124,344,560
+...
+</code></pre></div></p>
+<h3 id="mandatory-fields">Mandatory fields:</h3>
+<ol>
+<li>The very first line identifies the file as an IMU log. This line should either be <code>GYROFLOW IMU LOG</code> or the more neutral <code>CAMERA IMU LOG</code>.</li>
+<li>The second line <code>version,1.3</code> describes the "version" of the .gcsv file format. This is equal to <code>1.3</code> for now. The versions are backwards compatible, but changes with the addition of new metadata fields.</li>
+<li>The third line contains a unique ID associated with the logger/camera. For instance a high-end camera with internal logging may use <code>id,potatocam_deluxe_4k_grey_edition</code>.</li>
+<li>The fourth line contains the orientation string. This corresponds to the <code>IMU Orientation</code> field in Gyroflow (see the implementation notes below for further details).</li>
+<li>The next few lines contain optional metadata. These are not strictly required, but may improve workflow and stabilization. Developers are thus encouraged to include all known fields.</li>
+<li>The subsequent lines with <code>tscale</code>, <code>ascale</code> and <code>gscale</code> describe constants used to scale the raw sensor values.<ul>
+<li>Multiplying <code>tscale</code> by the raw <code>t</code> values should give the time in <strong>seconds</strong>. It can thus be deduced that the file above is logging at 1000 Hz since each line increments by <code>1*0.001=0.001 s</code>, corresponding to a frequency of 1 KHz. The resolution of the timestamps should be 1 ms or better.</li>
+<li>Multiplying <code>gscale</code> by the raw <code>gx/gy/gz</code> values should give the angular rate in <strong>rad/s</strong></li>
+<li>(If accelerometer data present) Multiplying <code>ascale</code> by the raw <code>ax/ay/az</code> values should give the acceleration in <strong>g</strong></li>
+<li>(If magnetometer data present) Multiplying <code>mscale</code> by <code>mx/my/mz</code> gives the measurements in <strong>gauss</strong> (Note that <code>1 tesla = 10000 gauss</code>).</li>
+</ul>
+</li>
+<li>The rest of the file simply consists of a standard CSV header and the raw values. The header and data order should be one of the following: <code>t,gx,gy,gz</code>, <code>t,gx,gy,gz,ax,ay,az</code>, or <code>t,gx,gy,gz,ax,ay,az,mx,my,mz</code>. Gyroscope data is the minimum requirement. Acceleration data is required for horizon lock, while magnetometer data improves drift in orientation determination (Not currently of significant importance).</li>
+<li>For the data itself, fixed-point integers are recommended with a scalar (point 6) in order to avoid excessively large text files. Using floating points here is still valid though. </li>
+</ol>
+<h3 id="optional-fields">Optional fields:</h3>
+<p>The following are all optional fields for the metadata block, but developers should include as many known fields as possible.</p>
+<ul>
+<li><code>Note</code> is for other misc. information.</li>
+<li><code>fwversion</code> is the firmware of the logger/camera.</li>
+<li><code>timestamp</code> is the unix timestamp when logging began.</li>
+<li><code>vendor</code> can contain the vendor or developer</li>
+<li><code>videofilename</code> is the name of the corresponding video file. Normally the <code>.gcsv</code> file name already matches, but this insures the information is kept if the filename changes.</li>
+<li><code>lensprofile</code> is the unique name of the lens preset and vendor folder. If it matches a lens profile in the <a href="https://github.com/gyroflow/gyroflow/tree/master/resources/camera_presets">database</a> it is automatically selected during loading.</li>
+<li><code>lens_info</code> is additional information about the lens/field of view not available in the metadata. This could be <code>wide</code>, <code>normal</code>, <code>narrow</code> for different FOV settings, <code>linear</code> for lens distortion correction. Most relevant for action cameras with different crop settings.</li>
+<li><code>frame_readout_time</code> is the time in milliseconds it takes to capture a full video frame using rolling shutter. This is used for rolling shutter correction.</li>
+<li><code>frame_readout_direction</code> is the direction of the readout. Most cameras with rolling shutter capture the top of the frame first. Note that Gyroflow currently only supports correcting 0 and 1.<ul>
+<li>0: Top to bottom</li>
+<li>1: Bottom to top</li>
+<li>2: Left to right</li>
+<li>3: Right to left</li>
+</ul>
+</li>
+</ul>
+<h3 id="implementation-notes">Implementation notes</h3>
+<p>The required parts of the header of the <code>.gcsv</code> file remains static for a given camera/setup, and can thus be written as a constant string to the file.</p>
+<p>Raw sensor values are often represented as 16-bit signed integers, meaning a range between of <code>+/- 2^15</code>. If the acceleration range is known to be +/- 4 g as was the case in the example above. Then <code>ascale = 4/2^15 = 0.00012207031</code>. Refer to the datasheet for conversion information. Similarly, a gyroscope with a range of <code>+/- 1000 deg/s</code> gives <code>gscale = (1000 * pi / 180)/2^15 = 0.00053263221</code>. Note that even when configured to a setting such as <code>+/- 1000 deg/s</code>, the actual calibration of the sensor may lead to a maximum slightly above or below this value. As always, consult the datasheet.</p>
+<p>For a logger/camera implementation, some other things to think about:</p>
+<ul>
+<li>For a camera, the timestamps should be based on the same time source as the video capture. This prevents drift between the two.</li>
+<li>Consider using microseconds for the timestamp if a faster sampling rate if the time source allows. This may improve the timing during the sync process.</li>
+<li>Consider using the data ready interrupts of IMU's instead of polling for more consistent timings.</li>
+<li>Ensure proper filtering of the data to meet the Nyquist criteria for the samling frequency. Even more filtering is usually recommended, e.g. setting the builtin hardware low pass filter cutoff at 50 Hz to 100 Hz is a good starting point, even for higher sampling frequencies.</li>
+</ul>
+<p>For the IMU Orientation string, the following figure corresponds to <code>YxZ</code>.</p>
+<p><div class="lightgallery"><a data-sub-html="" href="../img/example_axes.png"><img alt="" src="../img/example_axes.png" width="100%" /></a></div><p class="lightbox-caption-class"></p></p>
+<ul>
+<li>For the gyroscope, data for an axis correspond to the right-handed rotation rate of the camera body about that axis.</li>
+<li>The accelerometer data correspond to linear acceleration applied in the given direction. Due to the nature of gravity, a stationary object will experience an <em>upwards</em> acceleration of 9.81 m/s<sup>2</sup>, while an object in freefall will experience <em>zero</em> acceleration.</li>
+<li>The magnetometer data corresponds to the measured magnetic field vector.</li>
+</ul>
+<p>In order for orientation determination to work correctly, the data must have the same/aligned coordinate axes. For combined IMU sensors, this is already the case for the raw data. If a rotation is applied to the gyro data before being written, the same rotation should be applied to the accelerometer (and magnetometer). This ensures that the axes stay aligned.</p>
+<p>If the gyroscope and accelerometer data come from separate sensors, their axes must similarly be aligned, either physically or by applying a rotation in software.</p>
+<h3 id="version-changelog">Version changelog</h3>
+<ul>
+<li>1.0: Initial version</li>
+<li>1.1: Add lens profile field</li>
+<li>1.2: Add rolling shutter information</li>
+<li>1.3: Add <code>lens_info</code> field</li>
+</ul>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Gyroflow dev team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "navifation.tabs.sticky", "navigation.tracking", "navigation.expand"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  </body>
+</html>

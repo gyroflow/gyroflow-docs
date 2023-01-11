@@ -1,0 +1,1711 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../flowshutter/">
+      
+      
+        <link rel="next" href="../settings/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.1">
+    
+    
+      
+        <title>Quick Start - Gyroflow</title>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3bd4f189.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    <link rel="stylesheet" href="../../css/lightgallery.min.css">
+
+    
+    
+    <script src="../../js/lightgallery.min.js"></script>
+
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/css/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#quick-start-for-flowshutter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://gyroflow.xyz" title="Gyroflow" class="md-header__button md-logo" aria-label="Gyroflow" data-md-component="logo">
+      
+  <img src="../../assets/images/logo_small_white.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Gyroflow
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Quick Start
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/gyroflow/gyroflow" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../guide/quickstart/" class="md-tabs__link">
+        Quick start
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../cams/general/" class="md-tabs__link">
+        Camera and Gyro Logging
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../flowshutter/" class="md-tabs__link md-tabs__link--active">
+        Flowshutter
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../integrations/integrations/" class="md-tabs__link">
+        Plugins/integrations/tools
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../tech/filtering/" class="md-tabs__link">
+        Technical info
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../contrib/gyroflow/" class="md-tabs__link">
+        Contribute to the project
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../faq/" class="md-tabs__link">
+      FAQ
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://gyroflow.xyz" title="Gyroflow" class="md-nav__button md-logo" aria-label="Gyroflow" data-md-component="logo">
+      
+  <img src="../../assets/images/logo_small_white.svg" alt="logo">
+
+    </a>
+    Gyroflow
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/gyroflow/gyroflow" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Quick start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Quick start" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Quick start
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/quickstart/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/installation/" class="md-nav__link">
+        Installation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/workflow/" class="md-nav__link">
+        Workflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/settings/" class="md-nav__link">
+        Settings Explanation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/calibration/" class="md-nav__link">
+        Camera Calibration
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Camera and Gyro Logging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Camera and Gyro Logging" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Camera and Gyro Logging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/general/" class="md-nav__link">
+        General
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Camera setup guides
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Camera setup guides" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Camera setup guides
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/gopro/" class="md-nav__link">
+        GoPro
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/dji/" class="md-nav__link">
+        DJI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/runcam/" class="md-nav__link">
+        Runcam
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/sony/" class="md-nav__link">
+        Sony
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/insta360/" class="md-nav__link">
+        Insta360
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/mobius/" class="md-nav__link">
+        Mobius
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/red/" class="md-nav__link">
+        RED Cinema
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/blackmagic/" class="md-nav__link">
+        Blackmagic
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../cams/smartphones/" class="md-nav__link">
+        Smartphones
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Gyro Logging
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Gyro Logging" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Gyro Logging
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logging/betaflight/" class="md-nav__link">
+        Betaflight/INav/Cleanflight/etc.
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logging/flowbox/" class="md-nav__link">
+        Flowbox
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logging/actioncamlogger/" class="md-nav__link">
+        Action cam as logger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logging/customlogger/" class="md-nav__link">
+        Custom hardware/logger
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../logging/gcsv/" class="md-nav__link">
+        Gyroflow .gcsv reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Flowshutter
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Flowshutter" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Flowshutter
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../flowshutter/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Quick Start
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Quick Start
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#meet-the-hardware" class="md-nav__link">
+    Meet the hardware
+  </a>
+  
+    <nav class="md-nav" aria-label="Meet the hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oled-screen" class="md-nav__link">
+    OLED screen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    Buttons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-control-port" class="md-nav__link">
+    Camera control port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flowshutter-usb-chargeesp32-usb" class="md-nav__link">
+    Flowshutter USB (Charge/ESP32 USB)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fc-usb-flowbox-usb" class="md-nav__link">
+    FC USB (Flowbox USB)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mount-it-to-your-camera" class="md-nav__link">
+    Mount it to your camera
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-it-for-your-camera" class="md-nav__link">
+    Config it for your camera
+  </a>
+  
+    <nav class="md-nav" aria-label="Config it for your camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select-camera-protocol" class="md-nav__link">
+    Select camera protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-device-mode" class="md-nav__link">
+    Select device mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reboot-device" class="md-nav__link">
+    Reboot device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-logger-part" class="md-nav__link">
+    Config logger part
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exatracting-motion-data" class="md-nav__link">
+    Exatracting motion data
+  </a>
+  
+    <nav class="md-nav" aria-label="Exatracting motion data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-fc-to-computer" class="md-nav__link">
+    Connecting FC to computer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activating-msc-mode" class="md-nav__link">
+    Activating MSC mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-motion-data" class="md-nav__link">
+    Copy motion data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-firmware" class="md-nav__link">
+    Flash firmware
+  </a>
+  
+    <nav class="md-nav" aria-label="Flash firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flash-flowshutter-firmware" class="md-nav__link">
+    Flash flowshutter firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash-fc-firmware" class="md-nav__link">
+    Flash FC firmware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        Settings Explanation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_4">
+          Support Info
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Support Info" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Support Info
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../hardware/" class="md-nav__link">
+        Supported Hardware
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clist/" class="md-nav__link">
+        Supported Camera
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wiring/" class="md-nav__link">
+        Wiring to Camera
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Plugins/integrations/tools
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Plugins/integrations/tools" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Plugins/integrations/tools
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../integrations/integrations/" class="md-nav__link">
+        List of tools
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Technical info
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Technical info" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Technical info
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/filtering/" class="md-nav__link">
+        Filtering and noise
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/smoothing/" class="md-nav__link">
+        Orientations and smoothing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/rollingshutter/" class="md-nav__link">
+        Rolling Shutter
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tech/relatedprojects/" class="md-nav__link">
+        Related Projects/Literature
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
+          Contribute to the project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute to the project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute to the project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contrib/gyroflow/" class="md-nav__link">
+        Gyroflow
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contrib/documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contrib/support/" class="md-nav__link">
+        Support Gyroflow / Contributors list
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#meet-the-hardware" class="md-nav__link">
+    Meet the hardware
+  </a>
+  
+    <nav class="md-nav" aria-label="Meet the hardware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#oled-screen" class="md-nav__link">
+    OLED screen
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buttons" class="md-nav__link">
+    Buttons
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#camera-control-port" class="md-nav__link">
+    Camera control port
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flowshutter-usb-chargeesp32-usb" class="md-nav__link">
+    Flowshutter USB (Charge/ESP32 USB)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fc-usb-flowbox-usb" class="md-nav__link">
+    FC USB (Flowbox USB)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mount-it-to-your-camera" class="md-nav__link">
+    Mount it to your camera
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-it-for-your-camera" class="md-nav__link">
+    Config it for your camera
+  </a>
+  
+    <nav class="md-nav" aria-label="Config it for your camera">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#select-camera-protocol" class="md-nav__link">
+    Select camera protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#select-device-mode" class="md-nav__link">
+    Select device mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reboot-device" class="md-nav__link">
+    Reboot device
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#config-logger-part" class="md-nav__link">
+    Config logger part
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exatracting-motion-data" class="md-nav__link">
+    Exatracting motion data
+  </a>
+  
+    <nav class="md-nav" aria-label="Exatracting motion data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#connecting-fc-to-computer" class="md-nav__link">
+    Connecting FC to computer
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#activating-msc-mode" class="md-nav__link">
+    Activating MSC mode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-motion-data" class="md-nav__link">
+    Copy motion data
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#flash-firmware" class="md-nav__link">
+    Flash firmware
+  </a>
+  
+    <nav class="md-nav" aria-label="Flash firmware">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flash-flowshutter-firmware" class="md-nav__link">
+    Flash flowshutter firmware
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flash-fc-firmware" class="md-nav__link">
+    Flash FC firmware
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="quick-start-for-flowshutter">Quick Start for Flowshutter</h1>
+<p>This page assumes that you are using a commercial version of Flowshutter (depending on the manufacturer, it may be called differently, such as "stabilization box", "stabilization data box", "flowshutter box", etc), these commercial hardwares often contain a flowshutter board and a betaflight flight controller, as a whole. On this page we refer to these wholes as <strong>Flowshutter</strong>.</p>
+<p><img alt="" src="../img/basic_inner_structure.png" /></p>
+<p>If you are using a DIY flowshutter, then you should clearly separate your flight controller from the flowshutter, and carefully consider the specific configuration of the corresponding parts in this tutorial on your own build.</p>
+<h2 id="meet-the-hardware">Meet the hardware</h2>
+<p>Although hardware from different manufacturers varies, their main components should be the same - necessary parts of the flowshutter device/firmware to work properly.</p>
+<p>At the time of writing this page, I only have the commercial version of NeutronRC hardware - <a href="../hardware/#neutronrc-sdb"><strong>NeutronRC SDB</strong></a>, so this page will give you a quick start based on that.</p>
+<p><img alt="" src="../img/nerc_sdb_overview.png" /></p>
+<h3 id="oled-screen">OLED screen</h3>
+<p>Flowshutter currently only support a single OLED screen, with 128x32 pixels.</p>
+<h3 id="buttons">Buttons</h3>
+<p>Flowshutter requires two physical buttons to complete the interaction, they are the <strong>PAGE</strong> button and the <strong>ENTER</strong> button</p>
+<h3 id="camera-control-port">Camera control port</h3>
+<p>Flowshutter's control of the camera is achieved through the connection of physical wires to transmit control signals. So in order to be able to control your camera properly, you should use this port to properly connect with the camera's control interface.</p>
+<h3 id="flowshutter-usb-chargeesp32-usb">Flowshutter USB (Charge/ESP32 USB)</h3>
+<p>This interface is used to upgrade the flowshutter firmware. </p>
+<div class="admonition note">
+<p>Please note the difference between "Flowshutter" and "flowshutter", the former is a physical entity, and the latter refers specifically to the firmware.</p>
+</div>
+<h3 id="fc-usb-flowbox-usb">FC USB (Flowbox USB)</h3>
+<p>This interface is use to configure the flight controller (motion data logger), and export motion data.</p>
+<h2 id="mount-it-to-your-camera">Mount it to your camera</h2>
+<p>Please mount Flowshutter rigidly to your camera. For use in high-vibration environments (such as a large X8 drone), be sure to take vibration reduction measures for the camera as a whole.</p>
+<p><img alt="" src="../img/mount_on_camera.png" /></p>
+<p>You may have concerns about the installation orientation, but it doesn't matter, we have many flexible ways to offset the impact of different installation orientations. The easiest way will be introduced in the next section.</p>
+<h2 id="config-it-for-your-camera">Config it for your camera</h2>
+<h3 id="select-camera-protocol">Select camera protocol</h3>
+<p><img alt="" src="../img/select_camera_protocol.png" /></p>
+<h3 id="select-device-mode">Select device mode</h3>
+<p><img alt="" src="../img/check_device_mode.png" /></p>
+<h3 id="reboot-device">Reboot device</h3>
+<p><img alt="" src="../img/reboot_flowshutter.png" /></p>
+<h3 id="config-logger-part">Config logger part</h3>
+<ol>
+<li>Connecting FC to computer, open betaflight configurator and connect to FC (flowbox)</li>
+<li>Change orientation in <code>Configuration</code> tab, until the drone's movement matched up with your camera movement in <code>Setup</code> tab.</li>
+</ol>
+<h2 id="exatracting-motion-data">Exatracting motion data</h2>
+<h3 id="connecting-fc-to-computer">Connecting FC to computer</h3>
+<p><img alt="" src="../img/connect_fc.png" /></p>
+<h3 id="activating-msc-mode">Activating MSC mode</h3>
+<p>In configurator, <code>Blackbox</code> tab, click <code>Activate MSC</code> button.
+<img alt="" src="../img/activate_msc.png" /></p>
+<h3 id="copy-motion-data">Copy motion data</h3>
+<p>Then the FC will become a readable USB drive, and you can copy the motion data from it to your computer.
+<img alt="" src="../img/copy_log.png" /></p>
+<h2 id="flash-firmware">Flash firmware</h2>
+<p>For some special reason, it may be necessary to flash a new firmware in some cases, such as:</p>
+<ul>
+<li>The new firmware adds control support to your camera</li>
+<li>The new firmware has features you desperately need</li>
+<li>The new firmware fixes a bug you're currently experiencing</li>
+</ul>
+<p>The following will briefly introduce the steps of firmware upgrade for you in the simplest way.</p>
+<h3 id="flash-flowshutter-firmware">Flash flowshutter firmware</h3>
+<ol>
+<li>Download uPyCraft IDE</li>
+<li>Download flowshutter firmware from <a href="https://github.com/gyroflow/flowshutter/releases">GitHub release</a></li>
+<li>(Optional) Download and install CH340 driver for your computer</li>
+<li>Open uPyCraft IDE</li>
+<li>Connect Flowshutter USB to your computer</li>
+<li><code>uPyCraft IDE</code> -&gt; <code>Tools</code> -&gt; <code>BurnFirmware</code></li>
+<li>Configure burning parameters as below: <img alt="" src="../img/flash_flowshutter_firmware.png" /></li>
+<li>Hit <code>OK</code> and wait until it finishes </li>
+</ol>
+<h3 id="flash-fc-firmware">Flash FC firmware</h3>
+<ol>
+<li>Download betaflight configurator from <a href="https://github.com/betaflight/betaflight/releases">Betaflight configurator release</a></li>
+<li>Connect your FC (flowbox) to your computer</li>
+<li><code>Firmware Flasher</code> tab -&gt; <code>STM32F411</code> -&gt; <code>4.3</code> -&gt; <code>Load Firmware [Online]</code> -&gt; <code>Flash Firmware</code></li>
+<li>Add gyroflow <code>logger-presets</code> as third party preset source. Check <a href="/docs/logging/betaflight.md">this page</a> and/or <a href="/docs/logging/flowbox.md">this page</a> for more information.</li>
+<li>Connect to FC -&gt; <code>Presets</code> tab -&gt; pick and apply the cooresponding <code>gyroflow preset</code> for your device, e.g. <strong>NeutronRC SDB</strong> should pick <code>NeutronRC SDB</code> preset.</li>
+</ol>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      © Gyroflow dev team
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.tabs", "navifation.tabs.sticky", "navigation.tracking", "navigation.expand"], "search": "../../assets/javascripts/workers/search.12658920.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+    
+      <script src="../../assets/javascripts/bundle.5cf534bf.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+    <script>
+    var elements = document.getElementsByClassName("lightgallery");
+    for(var i=0; i<elements.length; i++) {
+       lightGallery(elements[i]);
+    }
+    </script>
+
+  </body>
+</html>
